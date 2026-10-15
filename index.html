@@ -9,8 +9,8 @@ h1{font-size:20px;margin:16px 0 8px}h2{font-size:16px}a{color:#1A315D}
 #elenco-piante button:hover,#elenco-piante button:focus{background:#1A315D;color:#fff}
 .piani{display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 4px 6px}#elenco-piante .piani button{display:inline-block;width:auto;margin:0;padding:3px 8px;font-size:12px}#elenco-piante .piani button[aria-pressed=true]{background:#1A315D;color:#fff;font-weight:700}
 .sede span{display:block;width:18px;height:18px;border-radius:50%;border:2px solid #222}.carr{background:#1A315D;color:#fff;font-size:15px;line-height:20px;text-align:center;border-radius:3px}.scritta{background:#fff;border:1px solid #666;border-radius:2px;font-size:10px;padding:0 2px;white-space:nowrap}.punto span{display:block;width:12px;height:12px;border-radius:50%;background:#7A8292;border:2px solid #fff;box-shadow:0 0 0 1px #333}.punto.oltre span{background:#B00020}.nascondi-scritte .scritta{display:none}.leaflet-marker-icon:focus{outline:3px solid #1A315D;outline-offset:2px}.pov-bar{display:flex;gap:6px;margin-top:4px}.pov-bar button,.ctl-perc button{font:inherit;font-size:13px;padding:4px 8px;border:1px solid #1A315D;background:#fff;color:#1A315D;border-radius:4px;cursor:pointer}.pov-bar button:focus,.ctl-perc button:focus{outline:3px solid #1A315D}.ctl-perc{background:#fff;padding:6px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.3);display:flex;flex-direction:column;gap:4px}@media(max-width:700px){body{flex-direction:column}#pannello{width:auto;max-width:none;height:45vh;border-right:0;border-bottom:1px solid #ddd}}</style></head>
-<body><aside id="pannello"><div class="banda"><strong>Lezioni aperte sulla disabilità — Università di Pisa.</strong> Le sedi delle lezioni e, per sei edifici, le piante del rilievo d'Ateneo del 2004. Gli ingressi accessibili sono in verifica: per entrare senza barriere scrivi a <a href="mailto:usid@unipi.it">usid@unipi.it</a>.</div>
-<section aria-labelledby="tp"><h2 id="tp">Edifici con la pianta 2004</h2><p style="font-size:13px">Scegli un edificio per vedere la pianta; i pulsanti cambiano piano.</p><ul id="elenco-piante"><li>caricamento…</li></ul></section>
+<body><aside id="pannello"><div class="banda"><strong>Lezioni aperte sulla disabilità — Università di Pisa.</strong> Le sedi delle lezioni e, per sei edifici, le piante del rilievo d'Ateneo. Gli ingressi accessibili sono in verifica: per entrare senza barriere scrivi a <a href="mailto:usid@unipi.it">usid@unipi.it</a>.</div>
+<section aria-labelledby="tp"><h2 id="tp">Edifici con la pianta</h2><p style="font-size:13px">Scegli un edificio per vedere la pianta; i pulsanti cambiano piano.</p><ul id="elenco-piante"><li>caricamento…</li></ul></section>
 <h2>Altre sedi</h2><p style="font-size:13px">Non ancora sulla mappa: la posizione è in verifica.</p><ul><li><strong>B22</strong>, viale delle Piagge 2</li><li><strong>Clinica Odontoiatrica - Ospedale Santa Chiara</strong>, via Roma 67</li><li><strong>Complesso Guidotti</strong>, via Trieste 30</li><li><strong>Dipartimento di Chimica</strong>, via Moruzzi 3</li><li><strong>Dipartimento di Scienze della Terra</strong>, via S. Maria 53</li><li><strong>Palazzo Carità</strong>, via Pasquale Paoli 9</li><li><strong>Polo Economia - Polo Didattico</strong>, via Ridolfi 10</li><li><strong>Polo Nobili</strong>, via Volta 4 bis</li><li><strong>Scuola Medica</strong>, via Roma 55</li></ul></aside>
 <div id="mappa" role="region" aria-label="Mappa delle sedi"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"></script><script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
@@ -100,9 +100,9 @@ function elemento(b) {
 if (typeof module !== 'undefined') module.exports = { elemento };
 
 
-// Gradini, soglie, rampe: si leggono dalle scritte del rilievo 2004. Limiti di riferimento del D.M. 236/1989:
+// Gradini, soglie, rampe: si leggono dalle scritte del rilievo. Limiti di riferimento del D.M. 236/1989:
 // dislivelli non superiori a 2,5 cm (art. 8.1.1), pendenza delle rampe non superiore all'8% (art. 8.1.11).
-const LIM_CM=2.5, LIM_PCT=8, AVVISO_2004='Rilievo 2004.';
+const LIM_CM=2.5, LIM_PCT=8, AVVISO_2004='Dal rilievo d\'Ateneo.';
 function leggiBarriera(t){
   const s=t.replace(',', '.');
   const pc=s.match(/(\d+(?:\.\d+)?)\s*%/); if(pc) return {tipo:'rampa',pct:parseFloat(pc[1])};
@@ -141,13 +141,13 @@ function puntoPianta(f,ll,linee,perc){
   const pr=f.properties, nome=pr.name||'';
   if(pr.tipo==='carrozzina')
     return L.marker(ll,{icon:L.divIcon({className:'carr',html:'&#9855;',iconSize:[20,20]}),title:nome+' — '+AVVISO_2004,alt:nome,keyboard:true})
-      .bindPopup('<strong>'+nome+'</strong><p>Nel rilievo del 2004 questo simbolo segnava un punto del percorso esaminato per chi usa la carrozzina.</p><p><small>'+AVVISO_2004+'</small></p>');
+      .bindPopup('<strong>'+nome+'</strong><p>Nel rilievo d\'Ateneo questo simbolo segnava un punto del percorso esaminato per chi usa la carrozzina.</p><p><small>'+AVVISO_2004+'</small></p>');
   const b=leggiBarriera(nome);
   if(b) return L.marker(ll,{icon:iconaBarriera(b),title:quotaDi(b)+' — '+AVVISO_2004,alt:quotaDi(b),keyboard:true}).bindTooltip(quotaDi(b)).bindPopup(()=>elemento(b),{maxWidth:370,minWidth:240,autoPanPaddingTopLeft:[10,110]});
   return L.marker(ll,{icon:L.divIcon({className:'scritta',html:nome.replace(/</g,'&lt;'),iconSize:null}),title:nome+' — '+AVVISO_2004,alt:nome,keyboard:true})
     .bindPopup('<strong>'+nome+'</strong><p><small>'+pr.description+'</small></p>');
 }
-// Prima il testo, poi la pianta (/mappa, regola 2): per ogni edificio l'elenco delle barriere segnate nel 2004, con la
+// Prima il testo, poi la pianta (/mappa, regola 2): per ogni edificio l'elenco di gradini, soglie e rampe, con la
 // stanza più vicina; da tastiera o lettore di schermo un pulsante porta al punto e ne apre il disegno.
 function elencoBarriere(li,segnati){
   li.innerHTML='';

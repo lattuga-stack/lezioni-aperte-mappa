@@ -19,7 +19,7 @@
  {
   "file": "A06_p12.geojson",
   "codice": "A06",
-  "titolo": "Piano primo — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano primo — Stato Attuale",
   "piano": "piano primo",
   "dwg": "Palazzo della Sapienza (A06)",
   "riquadro": [
@@ -36,7 +36,7 @@
  {
   "file": "A06_p20.geojson",
   "codice": "A06",
-  "titolo": "Piano secondo — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
   "dwg": "Palazzo della Sapienza (A06)",
   "riquadro": [
@@ -87,7 +87,7 @@
  {
   "file": "B09_p13.geojson",
   "codice": "B09",
-  "titolo": "Piano primo — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano primo — Stato Attuale",
   "piano": "piano primo",
   "dwg": "Agraria, via del Borghetto 80 (B09)",
   "riquadro": [
@@ -104,7 +104,7 @@
  {
   "file": "B09_p19.geojson",
   "codice": "B09",
-  "titolo": "Piano secondo — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
   "dwg": "Agraria, via del Borghetto 80 (B09)",
   "riquadro": [
@@ -138,7 +138,7 @@
  {
   "file": "C01_p15.geojson",
   "codice": "C01",
-  "titolo": "Piano primo — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano primo — Stato Attuale",
   "piano": "piano primo",
   "dwg": "Rettorato (C01)",
   "riquadro": [
@@ -155,7 +155,7 @@
  {
   "file": "C01_p23.geojson",
   "codice": "C01",
-  "titolo": "Piano secondo — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
   "dwg": "Rettorato (C01)",
   "riquadro": [
@@ -172,7 +172,7 @@
  {
   "file": "C01_p31.geojson",
   "codice": "C01",
-  "titolo": "Piano terzo — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano terzo — Stato Attuale",
   "piano": "piano terzo",
   "dwg": "Rettorato (C01)",
   "riquadro": [
@@ -206,7 +206,7 @@
  {
   "file": "C03_p07.geojson",
   "codice": "C03",
-  "titolo": "Piano ammezzato — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano ammezzato — Stato Attuale",
   "piano": "piano ammezzato",
   "dwg": "Palazzo Vitelli (C03)",
   "riquadro": [
@@ -223,7 +223,7 @@
  {
   "file": "C03_p14.geojson",
   "codice": "C03",
-  "titolo": "Piano secondo — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
   "dwg": "Palazzo Vitelli (C03)",
   "riquadro": [
@@ -240,7 +240,7 @@
  {
   "file": "FAR_p05.geojson",
   "codice": "FAR",
-  "titolo": "Piano seminterrato — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano seminterrato — Stato Attuale",
   "piano": "piano seminterrato",
   "dwg": "Farmacia (FAR)",
   "riquadro": [
@@ -274,7 +274,7 @@
  {
   "file": "FAR_p17.geojson",
   "codice": "FAR",
-  "titolo": "Piano secondo — Stato Attuale (rilievo 2004)",
+  "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
   "dwg": "Farmacia (FAR)",
   "riquadro": [
