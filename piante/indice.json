@@ -1,0 +1,291 @@
+[
+ {
+  "file": "A06_p01.geojson",
+  "codice": "A06",
+  "titolo": "Piano Terra — Stato Attuale, 1:400 (Tav. I)",
+  "piano": "piano terra",
+  "dwg": "Palazzo della Sapienza (A06)",
+  "riquadro": [
+   [
+    43.71705104055269,
+    10.398797899200755
+   ],
+   [
+    43.71760002610683,
+    10.399913677199049
+   ]
+  ]
+ },
+ {
+  "file": "A06_p12.geojson",
+  "codice": "A06",
+  "titolo": "Piano primo — Stato Attuale (rilievo 2004)",
+  "piano": "piano primo",
+  "dwg": "Palazzo della Sapienza (A06)",
+  "riquadro": [
+   [
+    43.717042651948816,
+    10.398797899152664
+   ],
+   [
+    43.717591637502956,
+    10.3999132571363
+   ]
+  ]
+ },
+ {
+  "file": "A06_p20.geojson",
+  "codice": "A06",
+  "titolo": "Piano secondo — Stato Attuale (rilievo 2004)",
+  "piano": "piano secondo",
+  "dwg": "Palazzo della Sapienza (A06)",
+  "riquadro": [
+   [
+    43.71704203451322,
+    10.398797899150166
+   ],
+   [
+    43.71759638166307,
+    10.399916628100978
+   ]
+  ]
+ },
+ {
+  "file": "B03_p03.geojson",
+  "codice": "B03",
+  "titolo": "Piano Terra — Stato Attuale, 1:200 (Tav. I)",
+  "piano": "piano terra",
+  "dwg": "Agraria, laboratori e officina, via del Borghetto 80 (B03)",
+  "riquadro": [
+   [
+    43.7109433386606,
+    10.410964459396112
+   ],
+   [
+    43.71145221462149,
+    10.411477093903443
+   ]
+  ]
+ },
+ {
+  "file": "B09_p02.geojson",
+  "codice": "B09",
+  "titolo": "Piano Terra — Stato Attuale, 1:400 (Tav. I)",
+  "piano": "piano terra",
+  "dwg": "Agraria, via del Borghetto 80 (B09)",
+  "riquadro": [
+   [
+    43.71119959362904,
+    10.411948431568414
+   ],
+   [
+    43.712228300801286,
+    10.413380106277392
+   ]
+  ]
+ },
+ {
+  "file": "B09_p13.geojson",
+  "codice": "B09",
+  "titolo": "Piano primo — Stato Attuale (rilievo 2004)",
+  "piano": "piano primo",
+  "dwg": "Agraria, via del Borghetto 80 (B09)",
+  "riquadro": [
+   [
+    43.711399355967934,
+    10.411972258296299
+   ],
+   [
+    43.71222822021461,
+    10.413344730960779
+   ]
+  ]
+ },
+ {
+  "file": "B09_p19.geojson",
+  "codice": "B09",
+  "titolo": "Piano secondo — Stato Attuale (rilievo 2004)",
+  "piano": "piano secondo",
+  "dwg": "Agraria, via del Borghetto 80 (B09)",
+  "riquadro": [
+   [
+    43.71139930433521,
+    10.411972344725115
+   ],
+   [
+    43.712228168581895,
+    10.413344817389595
+   ]
+  ]
+ },
+ {
+  "file": "C01_p06.geojson",
+  "codice": "C01",
+  "titolo": "Piano Terra — Stato Attuale, 1:200 (Tav. I)",
+  "piano": "piano terra",
+  "dwg": "Rettorato (C01)",
+  "riquadro": [
+   [
+    43.71655785370987,
+    10.39862579689927
+   ],
+   [
+    43.716880997495096,
+    10.399001036325895
+   ]
+  ]
+ },
+ {
+  "file": "C01_p15.geojson",
+  "codice": "C01",
+  "titolo": "Piano primo — Stato Attuale (rilievo 2004)",
+  "piano": "piano primo",
+  "dwg": "Rettorato (C01)",
+  "riquadro": [
+   [
+    43.716577325292015,
+    10.398628853387004
+   ],
+   [
+    43.71688152458248,
+    10.398967423223066
+   ]
+  ]
+ },
+ {
+  "file": "C01_p23.geojson",
+  "codice": "C01",
+  "titolo": "Piano secondo — Stato Attuale (rilievo 2004)",
+  "piano": "piano secondo",
+  "dwg": "Rettorato (C01)",
+  "riquadro": [
+   [
+    43.71657483365744,
+    10.398628787633951
+   ],
+   [
+    43.716879965274146,
+    10.398968860685203
+   ]
+  ]
+ },
+ {
+  "file": "C01_p31.geojson",
+  "codice": "C01",
+  "titolo": "Piano terzo — Stato Attuale (rilievo 2004)",
+  "piano": "piano terzo",
+  "dwg": "Rettorato (C01)",
+  "riquadro": [
+   [
+    43.71657481077628,
+    10.398628563717859
+   ],
+   [
+    43.716879942392985,
+    10.398968636743168
+   ]
+  ]
+ },
+ {
+  "file": "C03_p01.geojson",
+  "codice": "C03",
+  "titolo": "Piano Terra — Stato Attuale (Tav. I), 1:200",
+  "piano": "piano terra",
+  "dwg": "Palazzo Vitelli (C03)",
+  "riquadro": [
+   [
+    43.716512960907025,
+    10.398135820910566
+   ],
+   [
+    43.71692233804665,
+    10.398671120219243
+   ]
+  ]
+ },
+ {
+  "file": "C03_p07.geojson",
+  "codice": "C03",
+  "titolo": "Piano ammezzato — Stato Attuale (rilievo 2004)",
+  "piano": "piano ammezzato",
+  "dwg": "Palazzo Vitelli (C03)",
+  "riquadro": [
+   [
+    43.7165458523033,
+    10.398341962318122
+   ],
+   [
+    43.71690407419588,
+    10.398671453090486
+   ]
+  ]
+ },
+ {
+  "file": "C03_p14.geojson",
+  "codice": "C03",
+  "titolo": "Piano secondo — Stato Attuale (rilievo 2004)",
+  "piano": "piano secondo",
+  "dwg": "Palazzo Vitelli (C03)",
+  "riquadro": [
+   [
+    43.71651540770305,
+    10.398133409366059
+   ],
+   [
+    43.71691437612705,
+    10.398672030855016
+   ]
+  ]
+ },
+ {
+  "file": "FAR_p05.geojson",
+  "codice": "FAR",
+  "titolo": "Piano seminterrato — Stato Attuale (rilievo 2004)",
+  "piano": "piano seminterrato",
+  "dwg": "Farmacia (FAR)",
+  "riquadro": [
+   [
+    43.71625447323443,
+    10.388362686306305
+   ],
+   [
+    43.71703655804137,
+    10.389525229282807
+   ]
+  ]
+ },
+ {
+  "file": "FAR_p12.geojson",
+  "codice": "FAR",
+  "titolo": "Piano Rialzato — Stato Attuale, 1:400 (Tav. IV)",
+  "piano": "piano rialzato",
+  "dwg": "Farmacia (FAR)",
+  "riquadro": [
+   [
+    43.71628787518235,
+    10.38836273577678
+   ],
+   [
+    43.717012075986155,
+    10.389491558401048
+   ]
+  ]
+ },
+ {
+  "file": "FAR_p17.geojson",
+  "codice": "FAR",
+  "titolo": "Piano secondo — Stato Attuale (rilievo 2004)",
+  "piano": "piano secondo",
+  "dwg": "Farmacia (FAR)",
+  "riquadro": [
+   [
+    43.71630598129778,
+    10.388446055733896
+   ],
+   [
+    43.71696966589137,
+    10.389491390740961
+   ]
+  ]
+ }
+]
