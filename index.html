@@ -155,7 +155,7 @@ function elencoBarriere(li,segnati){
   if(!bar.length)return;
   const testi=segnati.filter(s=>!leggiBarriera(s.f.properties.name||'')&&s.f.properties.tipo!=='carrozzina'&&/[a-z]{3}/i.test(s.f.properties.name||''));
   const det=document.createElement('details'),sm=document.createElement('summary'),ol=document.createElement('ul');
-  sm.textContent='Barriere segnate nel 2004 ('+bar.length+')';sm.style.cssText='font-size:13px;cursor:pointer;margin:2px 0 6px 6px';
+  sm.textContent='Gradini, soglie e rampe ('+bar.length+')';sm.style.cssText='font-size:13px;cursor:pointer;margin:2px 0 6px 6px';
   ol.style.cssText='list-style:none;padding-left:10px;margin:0 0 8px';
   bar.forEach(s=>{
     let v=null,dv=12;testi.forEach(x=>{const d=m.distance(s.ll,x.ll);if(d<dv){dv=d;v=x;}});
