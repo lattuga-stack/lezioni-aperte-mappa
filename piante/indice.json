@@ -5,6 +5,7 @@
   "titolo": "Piano Terra — Stato Attuale, 1:400 (Tav. I)",
   "piano": "piano terra",
   "dwg": "Palazzo della Sapienza (A06)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71705104055269,
@@ -22,6 +23,7 @@
   "titolo": "Piano primo — Stato Attuale",
   "piano": "piano primo",
   "dwg": "Palazzo della Sapienza (A06)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.717042651948816,
@@ -39,6 +41,7 @@
   "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
   "dwg": "Palazzo della Sapienza (A06)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71704203451322,
@@ -51,11 +54,48 @@
   ]
  },
  {
+  "file": "A26_piano0.geojson",
+  "codice": "A26",
+  "titolo": "Piano terra — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano terra",
+  "dwg": "Polo Carmignani",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.7199474,
+    10.4004194
+   ],
+   [
+    43.7202963,
+    10.4013796
+   ]
+  ]
+ },
+ {
+  "file": "A26_piano1.geojson",
+  "codice": "A26",
+  "titolo": "Piano primo — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano primo",
+  "dwg": "Polo Carmignani",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.719986,
+    10.4005196
+   ],
+   [
+    43.7202501,
+    10.4013498
+   ]
+  ]
+ },
+ {
   "file": "B03_p03.geojson",
   "codice": "B03",
   "titolo": "Piano Terra — Stato Attuale, 1:200 (Tav. I)",
   "piano": "piano terra",
   "dwg": "Agraria, laboratori e officina, via del Borghetto 80 (B03)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.7109433386606,
@@ -73,6 +113,7 @@
   "titolo": "Piano Terra — Stato Attuale, 1:400 (Tav. I)",
   "piano": "piano terra",
   "dwg": "Agraria, via del Borghetto 80 (B09)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71119959362904,
@@ -90,6 +131,7 @@
   "titolo": "Piano primo — Stato Attuale",
   "piano": "piano primo",
   "dwg": "Agraria, via del Borghetto 80 (B09)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.711399355967934,
@@ -107,6 +149,7 @@
   "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
   "dwg": "Agraria, via del Borghetto 80 (B09)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71139930433521,
@@ -119,11 +162,102 @@
   ]
  },
  {
+  "file": "B46_piano0.geojson",
+  "codice": "B46",
+  "titolo": "Piano terra — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano terra",
+  "dwg": "Polo A, Ingegneria (B46)",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.7205338,
+    10.3889101
+   ],
+   [
+    43.7217675,
+    10.3912886
+   ]
+  ]
+ },
+ {
+  "file": "B46_piano1.geojson",
+  "codice": "B46",
+  "titolo": "Piano primo — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano primo",
+  "dwg": "Polo A, Ingegneria (B46)",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.7205348,
+    10.3889172
+   ],
+   [
+    43.7217685,
+    10.3912702
+   ]
+  ]
+ },
+ {
+  "file": "B46_piano3.geojson",
+  "codice": "B46",
+  "titolo": "Piano terzo — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano terzo",
+  "dwg": "Polo A, Ingegneria (B46)",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.7207604,
+    10.3890563
+   ],
+   [
+    43.7217902,
+    10.3914718
+   ]
+  ]
+ },
+ {
+  "file": "B46_piano4.geojson",
+  "codice": "B46",
+  "titolo": "Piano quarto — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano quarto",
+  "dwg": "Polo A, Ingegneria (B46)",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.7208007,
+    10.3890298
+   ],
+   [
+    43.7217831,
+    10.3913855
+   ]
+  ]
+ },
+ {
+  "file": "B46_piano5.geojson",
+  "codice": "B46",
+  "titolo": "Piano quinto — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano quinto",
+  "dwg": "Polo A, Ingegneria (B46)",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.7207978,
+    10.3889899
+   ],
+   [
+    43.7218055,
+    10.3914061
+   ]
+  ]
+ },
+ {
   "file": "C01_p06.geojson",
   "codice": "C01",
   "titolo": "Piano Terra — Stato Attuale, 1:200 (Tav. I)",
   "piano": "piano terra",
   "dwg": "Rettorato (C01)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71655785370987,
@@ -141,6 +275,7 @@
   "titolo": "Piano primo — Stato Attuale",
   "piano": "piano primo",
   "dwg": "Rettorato (C01)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.716577325292015,
@@ -158,6 +293,7 @@
   "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
   "dwg": "Rettorato (C01)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71657483365744,
@@ -175,6 +311,7 @@
   "titolo": "Piano terzo — Stato Attuale",
   "piano": "piano terzo",
   "dwg": "Rettorato (C01)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71657481077628,
@@ -192,6 +329,7 @@
   "titolo": "Piano Terra — Stato Attuale (Tav. I), 1:200",
   "piano": "piano terra",
   "dwg": "Palazzo Vitelli (C03)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.716512960907025,
@@ -209,6 +347,7 @@
   "titolo": "Piano ammezzato — Stato Attuale",
   "piano": "piano ammezzato",
   "dwg": "Palazzo Vitelli (C03)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.7165458523033,
@@ -226,6 +365,7 @@
   "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
   "dwg": "Palazzo Vitelli (C03)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71651540770305,
@@ -243,6 +383,7 @@
   "titolo": "Piano seminterrato — Stato Attuale",
   "piano": "piano seminterrato",
   "dwg": "Farmacia (FAR)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71625447323443,
@@ -260,6 +401,7 @@
   "titolo": "Piano Rialzato — Stato Attuale, 1:400 (Tav. IV)",
   "piano": "piano rialzato",
   "dwg": "Farmacia (FAR)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71628787518235,
@@ -277,6 +419,7 @@
   "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
   "dwg": "Farmacia (FAR)",
+  "fonte": "rilievo",
   "riquadro": [
    [
     43.71630598129778,
@@ -285,6 +428,96 @@
    [
     43.71696966589137,
     10.389491390740961
+   ]
+  ]
+ },
+ {
+  "file": "FIBB_piano0.geojson",
+  "codice": "FIBB",
+  "titolo": "Piano terra — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano terra",
+  "dwg": "Polo Fibonacci, edificio B",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.7200205,
+    10.4073429
+   ],
+   [
+    43.7217666,
+    10.4081028
+   ]
+  ]
+ },
+ {
+  "file": "FIBB_piano1.geojson",
+  "codice": "FIBB",
+  "titolo": "Piano primo — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano primo",
+  "dwg": "Polo Fibonacci, edificio B",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.7199599,
+    10.4074519
+   ],
+   [
+    43.7216159,
+    10.408312
+   ]
+  ]
+ },
+ {
+  "file": "PIA_piano0.geojson",
+  "codice": "PIA",
+  "titolo": "Piano terra — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano terra",
+  "dwg": "Polo Piagge",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.710133,
+    10.4113463
+   ],
+   [
+    43.7108926,
+    10.4125844
+   ]
+  ]
+ },
+ {
+  "file": "PIA_piano2.geojson",
+  "codice": "PIA",
+  "titolo": "Piano secondo — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano secondo",
+  "dwg": "Polo Piagge",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.71027,
+    10.4113904
+   ],
+   [
+    43.7108914,
+    10.4125467
+   ]
+  ]
+ },
+ {
+  "file": "PN_piano0.geojson",
+  "codice": "PN",
+  "titolo": "Piano terra — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
+  "piano": "piano terra",
+  "dwg": "Polo Porta Nuova",
+  "fonte": "dove",
+  "riquadro": [
+   [
+    43.7253957,
+    10.3908136
+   ],
+   [
+    43.7264229,
+    10.392171
    ]
   ]
  }
