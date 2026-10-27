@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ingegneria · Lezioni aperte</title>
+<meta name="description" content="Lezioni aperte sulla disabilità, Università di Pisa: le lezioni dell’area Ingegneria.">
+<link rel="icon" href="img/logo_evento.png">
+<style>
+@font-face{font-family:Inter;src:url(font/Inter-Regular.woff) format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url(font/Inter-SemiBold.woff) format('woff');font-weight:600;font-display:swap}
+@font-face{font-family:'Titillium Web';src:url(font/TitilliumWeb-Regular.woff) format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:'Titillium Web';src:url(font/TitilliumWeb-SemiBold.woff) format('woff');font-weight:600;font-display:swap}
+:root{--notte:#1A315D;--blu:#225DD7;--grigio:#F0F0F0;--testo:#1A315D;--tenue:#4A5878;--fondo:#fff;--carta:#fff;--riga:#D5DAE5}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--testo:#E8ECF5;--tenue:#B6C0D6;--fondo:#0F1C36;--carta:#16264A;
+ --grigio:#1C2E57;--riga:#2C4070;--blu:#7FA6FF}}
+:root[data-theme=dark]{--testo:#E8ECF5;--tenue:#B6C0D6;--fondo:#0F1C36;--carta:#16264A;--grigio:#1C2E57;--riga:#2C4070;--blu:#7FA6FF}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--testo);font:400 1.0625rem/1.55 'Titillium Web',system-ui,sans-serif}
+a{color:var(--blu)}
+:focus-visible{outline:3px solid var(--blu);outline-offset:2px}
+.salta{position:absolute;left:-999px;top:0;background:var(--notte);color:#fff;padding:.6rem 1rem;z-index:9}
+.salta:focus{left:1rem}
+.nascosto{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.testata{background:var(--notte);color:#fff}
+.testata .riga-loghi{display:flex;justify-content:space-between;align-items:center;gap:1rem;max-width:68rem;margin:0 auto;
+ padding:1rem 1rem 0}
+.testata .riga-loghi img.unipi{height:3.2rem;width:auto}
+.testata .riga-loghi img.evento{height:3.4rem;width:auto}
+.testata .titolo{max-width:68rem;margin:0 auto;padding:1.4rem 1rem 1.6rem}
+h1{font:600 clamp(2.2rem,8vw,4rem)/1.02 Inter,sans-serif;letter-spacing:-.02em;margin:0}
+h1 span{display:block;font-weight:400}
+.date{font:600 clamp(1.15rem,3.6vw,1.5rem)/1.3 Inter,sans-serif;color:#9DB8FF;margin:.9rem 0 0}
+.sotto{margin:.4rem 0 0;color:#DCE3F2}
+main{max-width:68rem;margin:0 auto;padding:0 1rem 2rem}
+section.area{scroll-margin-top:4.5rem;padding-top:1.8rem}
+section.area>h2{font:600 clamp(1.5rem,5vw,2.1rem)/1.15 Inter,sans-serif;margin:0 0 .2rem;color:var(--testo)}
+section.area>.conta{margin:0 0 1rem;color:var(--tenue)}
+.griglia{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,30rem),1fr))}
+article.lezione{background:var(--carta);border:1px solid var(--riga);border-top:4px solid var(--blu);border-radius:4px;
+ padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.35rem}
+article.lezione p{margin:0}
+.quando{font:600 1rem/1.3 Inter,sans-serif;color:var(--blu)}
+article.lezione h3{font:600 1.25rem/1.25 Inter,sans-serif;margin:.1rem 0 .2rem;scroll-margin-top:5rem}
+article.lezione h3::before{content:'«'}article.lezione h3::after{content:'»'}
+.chi strong{font-family:Inter,sans-serif;font-weight:600}
+.dove-didattica,.interviene{color:var(--tenue);font-size:.98rem}
+.etichetta{font:600 .8rem/1 Inter,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:var(--tenue);margin-right:.35rem}
+.vuoto{color:var(--tenue);font-style:italic}
+p.quando.vuoto{color:var(--tenue)}
+.piede{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem;margin-top:auto;padding-top:.6rem}
+.codice{font:600 .8rem/1 Inter,sans-serif;color:var(--tenue);border:1px solid var(--riga);border-radius:3px;padding:.2rem .4rem}
+.anche{font-size:.9rem;color:var(--tenue)}
+footer{border-top:1px solid var(--riga);margin-top:2rem}
+footer .dentro{max-width:68rem;margin:0 auto;padding:1.2rem 1rem 2rem;display:flex;gap:1.2rem;align-items:center;
+ justify-content:space-between;flex-wrap:wrap}
+footer p{margin:.1rem 0;font-size:.9rem;color:var(--tenue)}
+footer img{height:4.5rem;width:auto}
+p.descr{margin-top:.35rem;padding-top:.5rem;border-top:1px solid var(--riga)}
+.indietro{display:inline-flex;align-items:center;min-height:44px;color:#fff;font:600 .98rem/1.2 Inter,sans-serif}
+.testata h1.area{font-size:clamp(1.8rem,6.5vw,3rem);line-height:1.08}
+.testata .sopra{font:600 .95rem/1.3 Inter,sans-serif;color:#9DB8FF;margin:0 0 .4rem;text-transform:uppercase;letter-spacing:.05em}
+ul.menu{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:1rem;
+ grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr))}
+ul.menu a{display:flex;flex-direction:column;gap:.5rem;height:100%;min-height:9rem;padding:1.2rem 1.2rem 1.1rem;
+ background:var(--carta);border:1px solid var(--riga);border-left:6px solid var(--blu);border-radius:4px;
+ text-decoration:none;color:var(--testo)}
+ul.menu a:hover{border-color:var(--blu);box-shadow:0 2px 0 var(--blu)}
+ul.menu .nome{font:600 1.3rem/1.2 Inter,sans-serif}
+ul.menu .quante{font:600 1rem/1.2 Inter,sans-serif;color:var(--blu)}
+ul.menu .periodo{color:var(--tenue);font-size:.98rem;margin-top:auto}
+ul.menu a.da-assegnare{border-left-color:var(--tenue)}
+section.panoramica{margin-top:1.6rem;background:var(--grigio);border-radius:4px;padding:1rem 1.1rem}
+section.panoramica h2{font:600 1.2rem/1.2 Inter,sans-serif;margin:0 0 .6rem}
+section.panoramica ol{list-style:none;margin:0;padding:0}
+section.panoramica li{display:grid;grid-template-columns:minmax(8.5rem,11rem) 1fr;gap:.1rem 1rem;padding:.55rem 0;
+ border-top:1px solid var(--riga)}
+section.panoramica li:first-child{border-top:0}
+section.panoramica .g{font:600 .95rem/1.4 Inter,sans-serif;color:var(--blu)}
+section.panoramica .g.vuoto{color:var(--tenue);font-weight:400}
+section.panoramica a{font:600 1rem/1.35 Inter,sans-serif;color:var(--testo);text-decoration-color:var(--blu)}
+section.panoramica .c{grid-column:2;color:var(--tenue);font-size:.95rem}
+@media (max-width:34rem){section.panoramica li{grid-template-columns:1fr}section.panoramica .c{grid-column:1}}
+h2.tutte{font:600 1.4rem/1.2 Inter,sans-serif;margin:2rem 0 1rem}
+@media print{.testata{background:#fff;color:var(--notte)}.testata .date,.testata .sopra{color:var(--blu)}.indietro{display:none}
+ article.lezione{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="salta" href="#principale">Vai alla panoramica</a>
+<header class="testata">
+ <div class="riga-loghi">
+  <img class="unipi" src="img/marchio_unipi_bianco.png" alt="Università di Pisa" width="1234" height="419">
+  <img class="evento" src="img/logo_evento_negativo.png" alt="" width="227" height="227">
+ </div>
+ <div class="titolo"><a class="indietro" href="index.html">← Tutte le aree</a><p class="sopra">Lezioni aperte sulla disabilità</p><h1 class="area">Ingegneria</h1><p class="sotto">10 lezioni · dal 19 novembre al 30 novembre · aggiornato al 27 ottobre 2026</p></div>
+</header>
+<main id="principale">
+<section class="panoramica" aria-labelledby="t-pan"><h2 id="t-pan">Panoramica</h2><ol><li><span class="g vuoto">da comunicare</span><a href="#l83">Cercare nel genoma le basi genetiche della malattia: approcci, prospettive, e il caso della schizofrenia</a><span class="c">Alessio Bechini</span></li><li><span class="g">Giovedì 19 novembre</span><a href="#l37">Sperimentazione di terapie e dispositivi medici innovativi</a><span class="c">Carmelo De Maria, Valentina Calderai</span></li><li><span class="g">Martedì 24 novembre</span><a href="#l39">Progettare per la riabilitazione. Dalla progettazione centrata sull’utente alla prototipazione di dispositivi personalizzati</a><span class="c">Beatrice Aruanno e Armando Viviano Razionale</span></li><li><span class="g">Martedì 24 novembre</span><a href="#l75">Le declinazioni del Disegno: rappresentare e comunicare l’architettura</a><span class="c">Alessandro Meloni</span></li><li><span class="g">Martedì 24 novembre</span><a href="#l81">Tecnologie meccatroniche per una società inclusiva: sistemi di assistenza alla persona e soluzioni per la mobilità</a><span class="c">Roberto Di Rienzo</span></li><li><span class="g">Lunedì 30 novembre</span><a href="#l24">Design for all. Progettazione di prodotti e servizi per una vasta varietà di utenti.</a><span class="c">Gabriele Goretti e Caterina Dastoli</span></li><li><span class="g">Lunedì 30 novembre</span><a href="#l32">Progettare inclusivo: Universal Design, suono e luce nell’ambiente costruito.</a><span class="c">Francesco Leccese</span></li><li><span class="g vuoto">da comunicare</span><a href="#l19">La trasformazione delle telecomunicazioni e i nuovi servizi a supporto delle persone con disabilità</a><span class="c">Stefano GIORDANO</span></li><li><span class="g vuoto">da comunicare</span><a href="#l25">Città umane e accessibili.</a><span class="c">Paolo Fiamma</span></li><li><span class="g vuoto">da comunicare</span><a href="#l78">Accessibilità nel Web: principi e pratiche</a><span class="c">Alessio Vecchio</span></li></ol></section><h2 class="tutte">Le lezioni</h2><div class="griglia"><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l83">Cercare nel genoma le basi genetiche della malattia: approcci, prospettive, e il caso della schizofrenia</h3><p class="chi"><strong>Alessio Bechini</strong></p><p class="dove-didattica">Dipartimento di Ingegneria dell’informazione · Laurea Magistrale in Ingegneria Biomedica · Insegnamento: BIOINFORMATICA (688II)</p><p class="aula"><span class="etichetta">Aula</span> Ing A24 — Polo A, Largo Lucio Lazzarino 1</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">La bioinformatica ci fornisce gli strumenti algoritmici fondamentali per l’esplorazione del genoma. Per individuare eventuali basi genetiche di molte malattie, occorre associarne i tratti specifici a zone del genoma che possano giocare un ruolo nel contesto della patologia. Questa indagine coinvolge sia aspetti clinici che metodologie bioinformatiche e statistiche. La lezione, dopo aver presentato i necessari elementi di bioinformatica, biologia molecolare e genetica, introdurrà i principali approcci sfruttati in questo tipo di ricerca. Co-docente: prof.ssa Silvia Pellegrini, Università di Pisa co-docente: prof.ssa Grazia Rutigliano, Università di Pisa</p><div class="piede"><span class="codice">L83</span></div></article><article class="lezione"><p class="quando">Giovedì 19 novembre 2026 · ore 08:30–10:30</p><h3 id="l37">Sperimentazione di terapie e dispositivi medici innovativi</h3><p class="chi"><strong>Carmelo De Maria, Valentina Calderai</strong></p><p class="dove-didattica">Dipartimento di Ingegneria dell’informazione · Laurea Magistrale in Ingegneria Biomedica · Insegnamento: INNOVAZIONE E REGOLAMENTAZIONE DELLE TECNOLOGIE PER LA SALUTE (003NI)</p><p class="aula"><span class="etichetta">Aula</span> Ing B31 — Polo B, Via Giunta Pisano 28</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula non accessibile.</p><p class="descr">La lezione affronta, in una prospettiva europea, il processo di sperimentazione clinica di dispositivi e terapie innovative, come le terapie geniche, o quelle basate su ingegneria dei tessuti biologici, analizzando aspetti tecnici, normativi ed etici.</p><div class="piede"><span class="codice">L37</span></div></article><article class="lezione"><p class="quando">Martedì 24 novembre 2026 · ore 11:30–13:30</p><h3 id="l39">Progettare per la riabilitazione. Dalla progettazione centrata sull’utente alla prototipazione di dispositivi personalizzati</h3><p class="chi"><strong>Beatrice Aruanno e Armando Viviano Razionale</strong></p><p class="dove-didattica">Dipartimento di Ingegneria civile e industriale · Laurea in Ingegneria Per Il Design Industriale · Insegnamento: PROTOTIPAZIONE VIRTUALE E FISICA (870II)</p><p class="aula"><span class="etichetta">Aula</span> Ing SI3 — Polo B, Via Giunta Pisano 28</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">Come si progetta una tecnologia riabilitativa capace di adattarsi alle esigenze di ogni persona? Attraverso esempi tratti dai progetti europei PRIME-VR2 ed EDUWEAR, la lezione esplorerà il ruolo della progettazione centrata sull’utente, della prototipazione e delle tecnologie digitali nello sviluppo di dispositivi personalizzati per la riabilitazione. Un percorso interattivo, tra scansione 3D, dispositivi indossabili e realtà virtuale, per scoprire come il design e l’ingegneria possano contribuire a migliorare accessibilità e inclusione. Co-docente: Prof. Armando Viviano Razionale, Università di Pisa</p><div class="piede"><span class="codice">L39</span></div></article><article class="lezione"><p class="quando">Martedì 24 novembre 2026 · ore 08:30–10:30</p><h3 id="l75">Le declinazioni del Disegno: rappresentare e comunicare l’architettura</h3><p class="chi"><strong>Alessandro Meloni</strong></p><p class="dove-didattica">Dipartimento di Ingegneria dell’energia, dei sistemi, del territorio e delle costruzioni · Laurea Magistrale Ciclo Unico in Ingegneria edile - architettura · Insegnamento: Disegno dell’architettura 2 e metodi di rilievo dell’architettura (cod. 017HH)</p><p class="aula"><span class="etichetta">Aula</span> Ing A24 — Polo A, Largo Lucio Lazzarino 1</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">La lezione esplora il ruolo del Disegno come strumento di conoscenza e comunicazione dell’architettura, approfondendo le potenzialità della rappresentazione e della percezione multisensoriale nel promuovere l’accessibilità, l’inclusione e la fruizione del patrimonio culturale.</p><div class="piede"><span class="codice">L75</span></div></article><article class="lezione"><p class="quando">Martedì 24 novembre 2026 · ore 16:30–18:30</p><h3 id="l81">Tecnologie meccatroniche per una società inclusiva: sistemi di assistenza alla persona e soluzioni per la mobilità</h3><p class="chi"><strong>Roberto Di Rienzo</strong></p><p class="dove-didattica">Dipartimento di Ingegneria dell’informazione · Laurea Magistrale in Ingegneria Elettronica · Insegnamento: PROGETTAZIONE DI SISTEMI MECCATRONICI (1059I)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="descr">La lezione propone una riflessione sulla mobilità delle persone con disabilità e sulle barriere legate ad ambienti, servizi e percorsi non accessibili, che possono limitare autonomia e partecipazione. Sarà presentata una panoramica delle tecnologie meccatroniche per l’assistenza e la mobilità, con un focus sul progetto IR-ACCESS: un dispositivo meccatronico che motorizza una normale carrozzina e ne facilita l’impiego su terreni irregolari, favorendo l’accesso a siti archeologici e turistici. La lezione ne illustrerà funzionamento, comandi e architettura generale.</p><div class="piede"><span class="codice">L81</span></div></article><article class="lezione"><p class="quando">Lunedì 30 novembre 2026 · ore 16:30–18:30</p><h3 id="l24">Design for all. Progettazione di prodotti e servizi per una vasta varietà di utenti.</h3><p class="chi"><strong>Gabriele Goretti e Caterina Dastoli</strong></p><p class="interviene">Interviene: Dott.ssa Claudia Becchimanzi</p><p class="dove-didattica">Dipartimento di Ingegneria civile e industriale · Laurea in Ingegneria Per Il Design Industriale · Insegnamento: DESIGN PER L’ECONOMIA CIRCOLARE</p><p class="aula"><span class="etichetta">Aula</span> Ing A24 — Polo A, Largo Lucio Lazzarino 1</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">La lezione presenta il Design for All come approccio strategico all’innovazione di prodotti e servizi, valorizzando la diversità delle esigenze degli utenti come opportunità progettuale. Attraverso i principi dello Human-Centred Design, della User Experience e dell’Emotional Design, esplora il ruolo di inclusione, accessibilità e sostenibilità nei processi di innovazione, anche in un’ottica di economia circolare. Approfondisce inoltre i principi dello Universal Design, il quadro normativo sull’accessibilità e le metodologie di co-progettazione e analisi dei bisogni degli utenti. Co-docente: dott.ssa Caterina Dastoli, Università di Pisa Co-docente (ospite): dott.ssa Claudia Becchimanzi</p><div class="piede"><span class="codice">L24</span></div></article><article class="lezione"><p class="quando">Lunedì 30 novembre 2026 · ore 08:40–13:20</p><h3 id="l32">Progettare inclusivo: Universal Design, suono e luce nell’ambiente costruito.</h3><p class="chi"><strong>Francesco Leccese</strong></p><p class="interviene">Interviene: dott. Tommaso Chiappelli — Preparatore fisico Nazionale Paralimpica di Scherma</p><p class="dove-didattica">Dipartimento di Ingegneria dell’energia, dei sistemi, del territorio e delle costruzioni · Laurea Magistrale in Ingegneria Strutturale e Edile + Laurea Magistrale a ciclo unico in Ingegneria Edile-Architettura · Insegnamento: ILLUMINOTECNICA E ACUSTICA APPLICATA (797II)</p><p class="aula"><span class="etichetta">Aula</span> Ing B24 — Polo B, Via Giunta Pisano 28</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula non accessibile.</p><p class="descr">La progettazione inclusiva permette di realizzare spazi accessibili, sicuri e confortevoli per tutte le persone, indipendentemente dalle abilità fisiche, sensoriali o cognitive. L’Universal Design applicato all’ingegneria edile e all’architettura trova nel suono e nella luce due strumenti capaci di trasformare l’ambiente costruito da barriera a facilitatore.</p><div class="piede"><span class="codice">L32</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l19">La trasformazione delle telecomunicazioni e i nuovi servizi a supporto delle persone con disabilità</h3><p class="chi"><strong>Stefano GIORDANO</strong></p><p class="dove-didattica">Dipartimento di Ingegneria dell’informazione · Laurea in Ingegneria delle Telecomunicazioni · Insegnamento: NETWORKING (902II)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L19</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l25">Città umane e accessibili.</h3><p class="chi"><strong>Paolo Fiamma</strong></p><p class="dove-didattica">Dipartimento di Ingegneria dell’energia, dei sistemi, del territorio e delle costruzioni · Laurea Magistrale Ciclo Unico in Edile- Architettura e Laurea Triennale Ingegneria Civile -Edile · Insegnamento: Architettura Tecnica 1</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L25</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l78">Accessibilità nel Web: principi e pratiche</h3><p class="chi"><strong>Alessio Vecchio</strong></p><p class="dove-didattica">Dipartimento di Ingegneria dell’informazione · Laurea in Ingegneria Informatica · Insegnamento: Progettazione Web (080II)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L78</span></div></article></div>
+</main>
+<footer>
+ <div class="dentro">
+  <div>
+   <p>Delegato del Rettore per l’inclusione degli studenti e del personale con disabilità e DSA</p>
+   <p>USID – Ufficio Servizi per l’Inclusione di studenti con Disabilità</p>
+   <p>CUG – Comitato Unico di Garanzia · con i docenti referenti di Dipartimento per la disabilità</p>
+   <p><a href="mailto:usid@unipi.it">usid@unipi.it</a></p>
+   <p>Aree dei corsi dalle pagine dei corsi di laurea di unipi.it, lette il 27/10/2026.</p>
+  </div>
+  <img src="img/logo_usid.png" alt="USID – Ufficio Servizi per l’Inclusione, Università di Pisa" width="250" height="250">
+ </div>
+</footer>
+</body>
+</html>

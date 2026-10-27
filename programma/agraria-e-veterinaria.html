@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Agraria e Veterinaria · Lezioni aperte</title>
+<meta name="description" content="Lezioni aperte sulla disabilità, Università di Pisa: le lezioni dell’area Agraria e Veterinaria.">
+<link rel="icon" href="img/logo_evento.png">
+<style>
+@font-face{font-family:Inter;src:url(font/Inter-Regular.woff) format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url(font/Inter-SemiBold.woff) format('woff');font-weight:600;font-display:swap}
+@font-face{font-family:'Titillium Web';src:url(font/TitilliumWeb-Regular.woff) format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:'Titillium Web';src:url(font/TitilliumWeb-SemiBold.woff) format('woff');font-weight:600;font-display:swap}
+:root{--notte:#1A315D;--blu:#225DD7;--grigio:#F0F0F0;--testo:#1A315D;--tenue:#4A5878;--fondo:#fff;--carta:#fff;--riga:#D5DAE5}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--testo:#E8ECF5;--tenue:#B6C0D6;--fondo:#0F1C36;--carta:#16264A;
+ --grigio:#1C2E57;--riga:#2C4070;--blu:#7FA6FF}}
+:root[data-theme=dark]{--testo:#E8ECF5;--tenue:#B6C0D6;--fondo:#0F1C36;--carta:#16264A;--grigio:#1C2E57;--riga:#2C4070;--blu:#7FA6FF}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--testo);font:400 1.0625rem/1.55 'Titillium Web',system-ui,sans-serif}
+a{color:var(--blu)}
+:focus-visible{outline:3px solid var(--blu);outline-offset:2px}
+.salta{position:absolute;left:-999px;top:0;background:var(--notte);color:#fff;padding:.6rem 1rem;z-index:9}
+.salta:focus{left:1rem}
+.nascosto{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.testata{background:var(--notte);color:#fff}
+.testata .riga-loghi{display:flex;justify-content:space-between;align-items:center;gap:1rem;max-width:68rem;margin:0 auto;
+ padding:1rem 1rem 0}
+.testata .riga-loghi img.unipi{height:3.2rem;width:auto}
+.testata .riga-loghi img.evento{height:3.4rem;width:auto}
+.testata .titolo{max-width:68rem;margin:0 auto;padding:1.4rem 1rem 1.6rem}
+h1{font:600 clamp(2.2rem,8vw,4rem)/1.02 Inter,sans-serif;letter-spacing:-.02em;margin:0}
+h1 span{display:block;font-weight:400}
+.date{font:600 clamp(1.15rem,3.6vw,1.5rem)/1.3 Inter,sans-serif;color:#9DB8FF;margin:.9rem 0 0}
+.sotto{margin:.4rem 0 0;color:#DCE3F2}
+main{max-width:68rem;margin:0 auto;padding:0 1rem 2rem}
+section.area{scroll-margin-top:4.5rem;padding-top:1.8rem}
+section.area>h2{font:600 clamp(1.5rem,5vw,2.1rem)/1.15 Inter,sans-serif;margin:0 0 .2rem;color:var(--testo)}
+section.area>.conta{margin:0 0 1rem;color:var(--tenue)}
+.griglia{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,30rem),1fr))}
+article.lezione{background:var(--carta);border:1px solid var(--riga);border-top:4px solid var(--blu);border-radius:4px;
+ padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.35rem}
+article.lezione p{margin:0}
+.quando{font:600 1rem/1.3 Inter,sans-serif;color:var(--blu)}
+article.lezione h3{font:600 1.25rem/1.25 Inter,sans-serif;margin:.1rem 0 .2rem;scroll-margin-top:5rem}
+article.lezione h3::before{content:'«'}article.lezione h3::after{content:'»'}
+.chi strong{font-family:Inter,sans-serif;font-weight:600}
+.dove-didattica,.interviene{color:var(--tenue);font-size:.98rem}
+.etichetta{font:600 .8rem/1 Inter,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:var(--tenue);margin-right:.35rem}
+.vuoto{color:var(--tenue);font-style:italic}
+p.quando.vuoto{color:var(--tenue)}
+.piede{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem;margin-top:auto;padding-top:.6rem}
+.codice{font:600 .8rem/1 Inter,sans-serif;color:var(--tenue);border:1px solid var(--riga);border-radius:3px;padding:.2rem .4rem}
+.anche{font-size:.9rem;color:var(--tenue)}
+footer{border-top:1px solid var(--riga);margin-top:2rem}
+footer .dentro{max-width:68rem;margin:0 auto;padding:1.2rem 1rem 2rem;display:flex;gap:1.2rem;align-items:center;
+ justify-content:space-between;flex-wrap:wrap}
+footer p{margin:.1rem 0;font-size:.9rem;color:var(--tenue)}
+footer img{height:4.5rem;width:auto}
+p.descr{margin-top:.35rem;padding-top:.5rem;border-top:1px solid var(--riga)}
+.indietro{display:inline-flex;align-items:center;min-height:44px;color:#fff;font:600 .98rem/1.2 Inter,sans-serif}
+.testata h1.area{font-size:clamp(1.8rem,6.5vw,3rem);line-height:1.08}
+.testata .sopra{font:600 .95rem/1.3 Inter,sans-serif;color:#9DB8FF;margin:0 0 .4rem;text-transform:uppercase;letter-spacing:.05em}
+ul.menu{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:1rem;
+ grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr))}
+ul.menu a{display:flex;flex-direction:column;gap:.5rem;height:100%;min-height:9rem;padding:1.2rem 1.2rem 1.1rem;
+ background:var(--carta);border:1px solid var(--riga);border-left:6px solid var(--blu);border-radius:4px;
+ text-decoration:none;color:var(--testo)}
+ul.menu a:hover{border-color:var(--blu);box-shadow:0 2px 0 var(--blu)}
+ul.menu .nome{font:600 1.3rem/1.2 Inter,sans-serif}
+ul.menu .quante{font:600 1rem/1.2 Inter,sans-serif;color:var(--blu)}
+ul.menu .periodo{color:var(--tenue);font-size:.98rem;margin-top:auto}
+ul.menu a.da-assegnare{border-left-color:var(--tenue)}
+section.panoramica{margin-top:1.6rem;background:var(--grigio);border-radius:4px;padding:1rem 1.1rem}
+section.panoramica h2{font:600 1.2rem/1.2 Inter,sans-serif;margin:0 0 .6rem}
+section.panoramica ol{list-style:none;margin:0;padding:0}
+section.panoramica li{display:grid;grid-template-columns:minmax(8.5rem,11rem) 1fr;gap:.1rem 1rem;padding:.55rem 0;
+ border-top:1px solid var(--riga)}
+section.panoramica li:first-child{border-top:0}
+section.panoramica .g{font:600 .95rem/1.4 Inter,sans-serif;color:var(--blu)}
+section.panoramica .g.vuoto{color:var(--tenue);font-weight:400}
+section.panoramica a{font:600 1rem/1.35 Inter,sans-serif;color:var(--testo);text-decoration-color:var(--blu)}
+section.panoramica .c{grid-column:2;color:var(--tenue);font-size:.95rem}
+@media (max-width:34rem){section.panoramica li{grid-template-columns:1fr}section.panoramica .c{grid-column:1}}
+h2.tutte{font:600 1.4rem/1.2 Inter,sans-serif;margin:2rem 0 1rem}
+@media print{.testata{background:#fff;color:var(--notte)}.testata .date,.testata .sopra{color:var(--blu)}.indietro{display:none}
+ article.lezione{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="salta" href="#principale">Vai alla panoramica</a>
+<header class="testata">
+ <div class="riga-loghi">
+  <img class="unipi" src="img/marchio_unipi_bianco.png" alt="Università di Pisa" width="1234" height="419">
+  <img class="evento" src="img/logo_evento_negativo.png" alt="" width="227" height="227">
+ </div>
+ <div class="titolo"><a class="indietro" href="index.html">← Tutte le aree</a><p class="sopra">Lezioni aperte sulla disabilità</p><h1 class="area">Agraria e Veterinaria</h1><p class="sotto">9 lezioni · dal 19 novembre al 2 dicembre · aggiornato al 27 ottobre 2026</p></div>
+</header>
+<main id="principale">
+<section class="panoramica" aria-labelledby="t-pan"><h2 id="t-pan">Panoramica</h2><ol><li><span class="g">Giovedì 19 novembre</span><a href="#l86">Coltivare comunità. Agricoltura sociale, disabilità e nuove forme di inclusione.</a><span class="c">Paola Scarpellini</span></li><li><span class="g">Giovedì 19 novembre</span><a href="#l87">La Forza dei Legami: Come il trasporto elettronico cloroplastico ci insegna che l’unione supera ogni barriera.</a><span class="c">Lucia Guidi</span></li><li><span class="g">Giovedì 19 novembre</span><a href="#l88">Irrigazione digitale inclusiva: accessibilità e competenze contro il divario digitale</a><span class="c">Giovanni Rallo</span></li><li><span class="g">Giovedì 19 novembre</span><a href="#l89">Dai sensori alle decisioni: l’agricoltura digitale come strumento di inclusione?</a><span class="c">Lorenzo Cotrozzi</span></li><li><span class="g">Giovedì 19 novembre</span><a href="#l90">Campi aperti al futuro: come la robotica collaborativa e la gestione delle flotte ridefiniscono l’inclusione in agricoltura</a><span class="c">Marco Fontanelli</span></li><li><span class="g">Giovedì 26 novembre</span><a href="#l07">Inclusione nella formazione e nelle professioni zootecniche. E’ possibile abbattere le barriere?</a><span class="c">Iolanda Altomonte</span></li><li><span class="g">Giovedì 26 novembre</span><a href="#l20">L’agricoltura sociale per un nuovo welfare di comunità</a><span class="c">Francesco Di Iacovo</span></li><li><span class="g">Martedì 1 dicembre</span><a href="#l21">Costruire città che curano con gli animali il caso inhabit</a><span class="c">Francesco Di Iacovo</span></li><li><span class="g">Mercoledì 2 dicembre</span><a href="#l26">Gli interventi assistiti con gli animali: l’importanza della relazione uomo-animale</a><span class="c">Chiara Mariti</span></li></ol></section><h2 class="tutte">Le lezioni</h2><div class="griglia"><article class="lezione"><p class="quando">Giovedì 19 novembre 2026 · ore 09:00–09:45</p><h3 id="l86">Coltivare comunità. Agricoltura sociale, disabilità e nuove forme di inclusione.</h3><p class="chi"><strong>Paola Scarpellini</strong></p><p class="dove-didattica">Dipartimento di Scienze agrarie, alimentari e agro-ambientali · Laurea magistrale in Sistemi Agricoli Sostenibili · Insegnamento: Bioeconomy (540GG)</p><p class="aula"><span class="etichetta">Aula</span> Agr 7 — Facolta’ di Agraria - Aule Nuove, Via del Borghetto 80</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">Questa lezione si inserisce nella giornata “Coltivare l’inclusione: tecnologia, natura e scienza oltre le barriere” organizzato dal Dipartimento di Scienze Agrarie, Alimentari e Agro-ambientali e mira a esplorare il ruolo dell’agricoltura sociale nella promozione dell’inclusione delle persone con disabilità, favorendo autonomia, partecipazione e benessere. Sarà inoltre approfondito il contributo delle aziende agricole e la collaborazione tra i diversi attori coinvolti, tra cui servizi sociosanitari e cooperative sociali, nella costruzione di percorsi inclusivi e reti territoriali.</p><div class="piede"><span class="codice">L86</span></div></article><article class="lezione"><p class="quando">Giovedì 19 novembre 2026 · ore 09:45–10:30</p><h3 id="l87">La Forza dei Legami: Come il trasporto elettronico cloroplastico ci insegna che l’unione supera ogni barriera.</h3><p class="chi"><strong>Lucia Guidi</strong></p><p class="dove-didattica">Dipartimento di Scienze agrarie, alimentari e agro-ambientali · Laurea in Scienze Agrarie · Insegnamento: Chimica Generale (0093G)</p><p class="aula"><span class="etichetta">Aula</span> Agr 7 — Facolta’ di Agraria - Aule Nuove, Via del Borghetto 80</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">Questa lezione si inserisce nella giornata “Coltivare l’inclusione: tecnologia, natura e scienza oltre le barriere” organizzato dal Dipartimento di Scienze Agrarie, Alimentari e Agro-ambientali e mira a introdurre gli studenti allo studio del processo fotosintetico mediante un approccio didattico innovativo.</p><div class="piede"><span class="codice">L87</span></div></article><article class="lezione"><p class="quando">Giovedì 19 novembre 2026 · ore 10:30–11:15</p><h3 id="l88">Irrigazione digitale inclusiva: accessibilità e competenze contro il divario digitale</h3><p class="chi"><strong>Giovanni Rallo</strong></p><p class="dove-didattica">Dipartimento di Scienze agrarie, alimentari e agro-ambientali · Laurea in Scienze Agrarie · Insegnamento: Idraulica e idrologia agraria (438GG)</p><p class="aula"><span class="etichetta">Aula</span> Agr 7 — Facolta’ di Agraria - Aule Nuove, Via del Borghetto 80</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">Questa lezione si inserisce nella giornata “Coltivare l’inclusione: tecnologia, natura e scienza oltre le barriere”, organizzata dal Dipartimento di Scienze Agrarie, Alimentari e Agro-ambientali, e mira a promuovere l’accessibilità alle tecnologie digitali applicate all’irrigazione. Attraverso esempi pratici di sensoristica, monitoraggio e gestione intelligente dell’acqua, saranno illustrate le opportunità offerte dall’innovazione per sviluppare competenze digitali, superare le barriere legate alla disabilità e contribuire alla riduzione del divario digitale.</p><div class="piede"><span class="codice">L88</span></div></article><article class="lezione"><p class="quando">Giovedì 19 novembre 2026 · ore 11:15–12:00</p><h3 id="l89">Dai sensori alle decisioni: l’agricoltura digitale come strumento di inclusione?</h3><p class="chi"><strong>Lorenzo Cotrozzi</strong></p><p class="dove-didattica">Dipartimento di Scienze agrarie, alimentari e agro-ambientali · Laurea Magistrale in Sistemi agricoli sostenibili · Insegnamento: Monitoraggio e Controllo Avanzato degli Stress delle Colture (560GG)</p><p class="aula"><span class="etichetta">Aula</span> Agr 7 — Facolta’ di Agraria - Aule Nuove, Via del Borghetto 80</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">La lezione si inserisce nella giornata “Coltivare l’inclusione: tecnologia, natura e scienza oltre le barriere” organizzata dal Dipartimento di Scienze Agrarie, Alimentari e Agro-ambientali e approfondisce il ruolo dell’agricoltura digitale nel monitoraggio dello stato di salute delle colture e nel supporto alle decisioni agronomiche. Attraverso esempi applicativi, sono illustrate le potenzialità di sensori, tecnologie di imaging e sistemi di supporto alle decisioni per rendere la gestione delle colture più efficiente, sostenibile e accessibile, contribuendo a superare alcune barriere operative e favorendo l’inclusione.</p><div class="piede"><span class="codice">L89</span></div></article><article class="lezione"><p class="quando">Giovedì 19 novembre 2026 · ore 12:00–12:45</p><h3 id="l90">Campi aperti al futuro: come la robotica collaborativa e la gestione delle flotte ridefiniscono l’inclusione in agricoltura</h3><p class="chi"><strong>Marco Fontanelli</strong></p><p class="dove-didattica">Dipartimento di Scienze agrarie, alimentari e agro-ambientali · Laurea Magistrale in Sistemi agricoli sostenibili · Insegnamento: Automazione e robotica in agricoltura (539GG)</p><p class="aula"><span class="etichetta">Aula</span> Agr 7 — Facolta’ di Agraria - Aule Nuove, Via del Borghetto 80</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">Questa lezione, che si inserisce nella giornata “Coltivare l’inclusione: tecnologia, natura e scienza oltre le barriere” organizzato dal Dipartimento di Scienze Agrarie, Alimentari e Agro-ambientali, tratterà la tematica di grande attualità e decisamente molto dibattuta dell’uso dell’automazione avanzata in agricoltura. Le tecnologie coinvolte, se possono infatti da un lato in qualche modo spaventare per l’inevitabile impatto sociale, dall’altro potrebbero invece rappresentare un importante sostegno e una grande occasione per persone il cui inserimento nel lavoro agricolo “tradizionale” risulti difficoltoso.</p><div class="piede"><span class="codice">L90</span></div></article><article class="lezione"><p class="quando">Giovedì 26 novembre 2026 · ore 11:00–11:45</p><h3 id="l07">Inclusione nella formazione e nelle professioni zootecniche. E’ possibile abbattere le barriere?</h3><p class="chi"><strong>Iolanda Altomonte</strong></p><p class="dove-didattica">Dipartimento di Scienze veterinarie · Laurea Magistrale in Sistemi Zootecnici Sostenibili · Insegnamento: ALIMENTAZIONE E GENOMICA: NUOVI STRUMENTI PER LE PRODUZIONI SOSTENIBILI E PER L’ADATTABILITÀ AI CAMBIAMENTI CLIMATICI (0010G)</p><p class="aula"><span class="etichetta">Aula</span> Vet CM2 — B22, Viale delle Piagge 2</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">La lezione affronta il tema dell’inclusione delle persone con disabilità nella formazione e nelle professioni zootecniche e veterinarie, analizzando le principali barriere fisiche, culturali e organizzative. Attraverso evidenze scientifiche ed esperienze concrete, saranno illustrate le opportunità offerte dalle tecnologie assistive e dagli adattamenti degli ambienti di studio e lavoro. Particolare attenzione sarà dedicata a personalità che hanno contribuito all’innovazione zootecnica, evidenziando come la diversità possa rappresentare una risorsa per il settore.</p><div class="piede"><span class="codice">L07</span></div></article><article class="lezione"><p class="quando">Giovedì 26 novembre 2026 · ore 16:15–17:45</p><h3 id="l20">L’agricoltura sociale per un nuovo welfare di comunità</h3><p class="chi"><strong>Francesco Di Iacovo</strong></p><p class="interviene">Interviene: Dott. Alessandra Funghi e studenti — ATS Orti ETICI, Coop. Social Arnera, CiRAA.</p><p class="dove-didattica">Dipartimento di Scienze veterinarie · Laurea in Scienze E Tecnologie Delle Produzioni Animali · Insegnamento: Strumenti e metodi dello sviluppo rurale (297GG)</p><p class="aula"><span class="etichetta">Aula</span> Vet D — B25, Viale delle Piagge 2</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">La natura che cura. L’agricoltura sociale trasforma le aziende agricole in luoghi d’inclusione per le persone più fragili. Tra piante e animali nascono cibo sano, benessere e una comunità più forte. È il welfare che fa bene a tutti: un nuovo modello che coltiva valore umano, cibo, rispetto e nuove solidarietà.</p><div class="piede"><span class="codice">L20</span></div></article><article class="lezione"><p class="quando">Martedì 1 dicembre 2026 · ore 16:15–17:45</p><h3 id="l21">Costruire città che curano con gli animali il caso inhabit</h3><p class="chi"><strong>Francesco Di Iacovo</strong></p><p class="interviene">Interviene: Dott. Barbara Bellettini — Fattoria dei Barbari</p><p class="dove-didattica">Dipartimento di Scienze veterinarie · Laurea in Tecniche Di Allevamento Animale Ed Educazione Cinofila · Insegnamento: STRUMENTI E METODI PER LO SVILUPPO DELLE RELAZIONI UOMO-ANIMALE NELLE SOCIETÀ MODERNE (581GG)</p><p class="aula"><span class="etichetta">Aula</span> Vet F — B25, Viale delle Piagge 2</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">Gli animali vivono con noi, ma li sottovalutiamo? Coabitare in città significa riconoscerli come parte attiva dell’ecosistema urbano. Promuovere la relazione tra specie crea comunità e servizi innovativi, dove il rispetto diventa fonte di salute, inclusione e benessere, specie per i più fragili. Scopriamo come renderli alleati quotidiani!</p><div class="piede"><span class="codice">L21</span></div></article><article class="lezione"><p class="quando">Mercoledì 2 dicembre 2026 · ore 12:00–13:30</p><h3 id="l26">Gli interventi assistiti con gli animali: l’importanza della relazione uomo-animale</h3><p class="chi"><strong>Chiara Mariti</strong></p><p class="interviene">Interviene: Dott.ssa Barbara Bellettini, presidentessa di DoReMiao</p><p class="dove-didattica">Dipartimento di Scienze veterinarie · Laurea in Tecniche Di Allevamento Animale Ed Educazione Cinofila · Insegnamento: EDUCAZIONE CINOFILA (593GG) etologia, bioetica e antrozoologia (579gg)</p><p class="aula"><span class="etichetta">Aula</span> Vet R — B22, Viale delle Piagge 2</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">Gli interventi assistiti con animali (IAA; un tempo chiamati pet therapy) sono oggi piuttosto diffusi in quanto la loro valenza è apprezzata da utenti e operatori. La relazione che le persone instaurano con l’animale non umano gioca un ruolo cruciale negli IAA. In questo seminario la prof.ssa Mariti del Dip Sc. Veterinarie, insieme alla dott.ssa Barbara Bellettini Presidentessa di DoReMiao, parleranno degli ambiti in cui la relazione uomo-animale non umano diventa volano di inclusione, socializzazione e supporto, dagli interventi assistiti con animali alle fattorie didattiche.</p><div class="piede"><span class="codice">L26</span></div></article></div>
+</main>
+<footer>
+ <div class="dentro">
+  <div>
+   <p>Delegato del Rettore per l’inclusione degli studenti e del personale con disabilità e DSA</p>
+   <p>USID – Ufficio Servizi per l’Inclusione di studenti con Disabilità</p>
+   <p>CUG – Comitato Unico di Garanzia · con i docenti referenti di Dipartimento per la disabilità</p>
+   <p><a href="mailto:usid@unipi.it">usid@unipi.it</a></p>
+   <p>Aree dei corsi dalle pagine dei corsi di laurea di unipi.it, lette il 27/10/2026.</p>
+  </div>
+  <img src="img/logo_usid.png" alt="USID – Ufficio Servizi per l’Inclusione, Università di Pisa" width="250" height="250">
+ </div>
+</footer>
+</body>
+</html>
