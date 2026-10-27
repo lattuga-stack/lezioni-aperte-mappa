@@ -12,105 +12,181 @@
 @font-face{font-family:Inter;src:url(font/Inter-SemiBold.woff) format('woff');font-weight:600;font-display:swap}
 @font-face{font-family:'Titillium Web';src:url(font/TitilliumWeb-Regular.woff) format('woff');font-weight:400;font-display:swap}
 @font-face{font-family:'Titillium Web';src:url(font/TitilliumWeb-SemiBold.woff) format('woff');font-weight:600;font-display:swap}
-:root{--notte:#1A315D;--blu:#225DD7;--grigio:#F0F0F0;--testo:#1A315D;--tenue:#4A5878;--fondo:#fff;--carta:#fff;--riga:#D5DAE5}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--testo:#E8ECF5;--tenue:#B6C0D6;--fondo:#0F1C36;--carta:#16264A;
- --grigio:#1C2E57;--riga:#2C4070;--blu:#7FA6FF}}
-:root[data-theme=dark]{--testo:#E8ECF5;--tenue:#B6C0D6;--fondo:#0F1C36;--carta:#16264A;--grigio:#1C2E57;--riga:#2C4070;--blu:#7FA6FF}
+@view-transition{navigation:auto}
+:root{--notte:#1A315D;--blu:#225DD7;--cielo:#9DB8FF;--velo:#EEF2FA;--testo:#1A315D;--tenue:#56637F;--fondo:#fff;--riga:#D9DFEA}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--testo:#E8ECF5;--tenue:#AEB9D2;--fondo:#0E1A33;
+ --velo:#16264A;--riga:#2A3D68;--blu:#86A8FF}}
+:root[data-theme=dark]{--testo:#E8ECF5;--tenue:#AEB9D2;--fondo:#0E1A33;--velo:#16264A;--riga:#2A3D68;--blu:#86A8FF}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--fondo);color:var(--testo);font:400 1.0625rem/1.55 'Titillium Web',system-ui,sans-serif}
-a{color:var(--blu)}
-:focus-visible{outline:3px solid var(--blu);outline-offset:2px}
+body{margin:0;background:var(--fondo);color:var(--testo);font:400 1.0625rem/1.6 'Titillium Web',system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blu);outline-offset:3px}
 .salta{position:absolute;left:-999px;top:0;background:var(--notte);color:#fff;padding:.6rem 1rem;z-index:9}
 .salta:focus{left:1rem}
-.nascosto{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cornice{max-width:72rem;margin:0 auto;padding:0 1.25rem}
 .testata{background:var(--notte);color:#fff}
-.testata .riga-loghi{display:flex;justify-content:space-between;align-items:center;gap:1rem;max-width:68rem;margin:0 auto;
- padding:1rem 1rem 0}
-.testata .riga-loghi img.unipi{height:3.2rem;width:auto}
-.testata .riga-loghi img.evento{height:3.4rem;width:auto}
-.testata .titolo{max-width:68rem;margin:0 auto;padding:1.4rem 1rem 1.6rem}
-h1{font:600 clamp(2.2rem,8vw,4rem)/1.02 Inter,sans-serif;letter-spacing:-.02em;margin:0}
-h1 span{display:block;font-weight:400}
-.date{font:600 clamp(1.15rem,3.6vw,1.5rem)/1.3 Inter,sans-serif;color:#9DB8FF;margin:.9rem 0 0}
-.sotto{margin:.4rem 0 0;color:#DCE3F2}
-main{max-width:68rem;margin:0 auto;padding:0 1rem 2rem}
-section.area{scroll-margin-top:4.5rem;padding-top:1.8rem}
-section.area>h2{font:600 clamp(1.5rem,5vw,2.1rem)/1.15 Inter,sans-serif;margin:0 0 .2rem;color:var(--testo)}
-section.area>.conta{margin:0 0 1rem;color:var(--tenue)}
-.griglia{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,30rem),1fr))}
-article.lezione{background:var(--carta);border:1px solid var(--riga);border-top:4px solid var(--blu);border-radius:4px;
- padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.35rem}
+.loghi{display:flex;justify-content:space-between;align-items:center;padding-top:1.1rem}
+.loghi img.unipi{height:3rem;width:auto}
+.loghi img.evento{height:3rem;width:auto}
+/* ingresso */
+.ingresso .titolo{padding:3.2rem 0 3.4rem}
+.ingresso h1{font:600 clamp(2.6rem,9vw,5.2rem)/.98 Inter,sans-serif;letter-spacing:-.025em;margin:0}
+.ingresso h1 span{display:block;font-weight:400}
+.ingresso .date{font:600 clamp(1.1rem,3.4vw,1.45rem)/1.3 Inter,sans-serif;color:var(--cielo);margin:1.2rem 0 0}
+ul.aree{list-style:none;margin:0;padding:3rem 0 1rem;display:grid;gap:1.25rem;
+ grid-template-columns:repeat(auto-fill,minmax(min(100%,20.5rem),1fr))}
+ul.aree a{display:flex;flex-direction:column;justify-content:space-between;gap:2rem;height:100%;min-height:14rem;
+ padding:1.6rem 1.6rem 1.4rem;border:1.5px solid var(--riga);border-radius:22px;text-decoration:none;color:var(--testo);
+ background:var(--fondo);transition:background-color .3s,border-color .3s,color .3s}
+ul.aree .nome{font:600 clamp(1.4rem,2.5vw,1.7rem)/1.14 Inter,sans-serif;letter-spacing:-.015em;max-width:14ch}
+ul.aree .piede{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
+ul.aree .quante{font-size:1rem;line-height:1.4;color:var(--tenue);transition:color .3s}
+ul.aree .logo{width:3.6rem;height:3.6rem;flex:none}
+ul.aree a:hover,ul.aree a:focus-visible{background:var(--notte);border-color:var(--notte);color:#fff}
+ul.aree a:hover .quante,ul.aree a:focus-visible .quante{color:#DCE3F2}
+ul.aree a:hover .logo,ul.aree a:focus-visible .logo{--l1:#fff;--l2:var(--cielo)}
+ul.aree a:hover .arco-a,ul.aree a:focus-visible .arco-a{transform:rotate(14deg)}
+ul.aree a:hover .arco-b,ul.aree a:focus-visible .arco-b{transform:rotate(-14deg)}
+ul.aree a:hover .puntino,ul.aree a:focus-visible .puntino{transform:translate(-40px,-42px)}
+.resto{color:var(--tenue);margin:1rem 0 0}
+.resto a{color:var(--blu)}
+/* area */
+.area .titolo{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;padding:1.6rem 0 2.6rem}
+.indietro{display:inline-flex;align-items:center;min-height:44px;color:#DCE3F2;text-decoration:none;
+ font:400 1rem/1.2 'Titillium Web',sans-serif;margin-top:1rem}
+.indietro:hover{color:#fff;text-decoration:underline}
+.area h1{font:600 clamp(2.1rem,7vw,4rem)/1.02 Inter,sans-serif;letter-spacing:-.02em;margin:.6rem 0 0;max-width:18ch}
+.area .quante{margin:.8rem 0 0;color:#DCE3F2;font-size:1.1rem}
+.area .titolo .logo{width:clamp(6rem,22vw,10rem);height:auto}
+section.giorno{display:grid;grid-template-columns:9.5rem 1fr;gap:1rem 2.5rem;padding:2.6rem 0;border-top:1px solid var(--riga)}
+section.giorno:first-of-type{border-top:0}
+h2.data{margin:0;position:sticky;top:1rem;align-self:start;font-family:Inter,sans-serif;color:var(--testo)}
+h2.data .num{display:block;font-weight:600;font-size:4.2rem;line-height:.9;letter-spacing:-.04em;color:var(--blu)}
+h2.data .mese{display:block;font-weight:600;font-size:1.15rem;margin-top:.35rem}
+h2.data .sett{display:block;font-weight:400;font-size:1rem;color:var(--tenue)}
+h2.data.senza .num{font-size:1.6rem;line-height:1.1;letter-spacing:0}
+.lezioni{display:flex;flex-direction:column;gap:2.4rem}
+article.lezione{max-width:46rem}
 article.lezione p{margin:0}
-.quando{font:600 1rem/1.3 Inter,sans-serif;color:var(--blu)}
-article.lezione h3{font:600 1.25rem/1.25 Inter,sans-serif;margin:.1rem 0 .2rem;scroll-margin-top:5rem}
-article.lezione h3::before{content:'«'}article.lezione h3::after{content:'»'}
-.chi strong{font-family:Inter,sans-serif;font-weight:600}
-.dove-didattica,.interviene{color:var(--tenue);font-size:.98rem}
-.etichetta{font:600 .8rem/1 Inter,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:var(--tenue);margin-right:.35rem}
-.vuoto{color:var(--tenue);font-style:italic}
-p.quando.vuoto{color:var(--tenue)}
-.piede{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem;margin-top:auto;padding-top:.6rem}
-.codice{font:600 .8rem/1 Inter,sans-serif;color:var(--tenue);border:1px solid var(--riga);border-radius:3px;padding:.2rem .4rem}
-.anche{font-size:.9rem;color:var(--tenue)}
-footer{border-top:1px solid var(--riga);margin-top:2rem}
-footer .dentro{max-width:68rem;margin:0 auto;padding:1.2rem 1rem 2rem;display:flex;gap:1.2rem;align-items:center;
- justify-content:space-between;flex-wrap:wrap}
-footer p{margin:.1rem 0;font-size:.9rem;color:var(--tenue)}
+.ora{font:600 1rem/1.3 Inter,sans-serif;color:var(--blu)}
+article.lezione h3{font:600 clamp(1.4rem,3.2vw,1.85rem)/1.18 Inter,sans-serif;letter-spacing:-.012em;margin:.35rem 0 .55rem;
+ scroll-margin-top:1rem;text-wrap:balance}
+.chi{font:600 1.08rem/1.4 Inter,sans-serif}
+.con{color:var(--tenue);margin-top:.15rem}
+article.lezione p.descr{margin-top:1rem;font-size:1.1rem;line-height:1.7;max-width:65ch}
+.tenue{color:var(--tenue)}p.descr.tenue{font-style:italic}
+dl.info{margin:1.2rem 0 0;padding:1rem 1.2rem;background:var(--velo);border-radius:12px;display:grid;gap:.6rem;
+ grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr))}
+dl.info div{min-width:0}
+dl.info dt{font:600 .85rem/1.3 Inter,sans-serif;color:var(--tenue)}
+dl.info dd{margin:.1rem 0 0;font-size:.98rem;line-height:1.45}
+@media (max-width:40rem){section.giorno{grid-template-columns:1fr;gap:1.1rem;padding:2rem 0}
+ h2.data{position:static;display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+ h2.data .num{font-size:2.8rem}h2.data .mese,h2.data .sett{display:inline;margin:0}}
+footer{border-top:1px solid var(--riga);margin-top:3rem}
+footer .cornice{padding-top:1.4rem;padding-bottom:2.2rem;display:flex;gap:1.2rem;align-items:center;justify-content:space-between;
+ flex-wrap:wrap}
+footer p{margin:.1rem 0;font-size:.92rem;color:var(--tenue)}
+footer a{color:var(--blu)}
 footer img{height:4.5rem;width:auto}
-p.descr{margin-top:.35rem;padding-top:.5rem;border-top:1px solid var(--riga)}
-.indietro{display:inline-flex;align-items:center;min-height:44px;color:#fff;font:600 .98rem/1.2 Inter,sans-serif}
-.testata h1.area{font-size:clamp(1.8rem,6.5vw,3rem);line-height:1.08}
-.testata .sopra{font:600 .95rem/1.3 Inter,sans-serif;color:#9DB8FF;margin:0 0 .4rem;text-transform:uppercase;letter-spacing:.05em}
-ul.menu{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:1rem;
- grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr))}
-ul.menu a{display:flex;flex-direction:column;gap:.5rem;height:100%;min-height:9rem;padding:1.2rem 1.2rem 1.1rem;
- background:var(--carta);border:1px solid var(--riga);border-left:6px solid var(--blu);border-radius:4px;
- text-decoration:none;color:var(--testo)}
-ul.menu a:hover{border-color:var(--blu);box-shadow:0 2px 0 var(--blu)}
-ul.menu .nome{font:600 1.3rem/1.2 Inter,sans-serif}
-ul.menu .quante{font:600 1rem/1.2 Inter,sans-serif;color:var(--blu)}
-ul.menu .periodo{color:var(--tenue);font-size:.98rem;margin-top:auto}
-ul.menu a.da-assegnare{border-left-color:var(--tenue)}
-section.panoramica{margin-top:1.6rem;background:var(--grigio);border-radius:4px;padding:1rem 1.1rem}
-section.panoramica h2{font:600 1.2rem/1.2 Inter,sans-serif;margin:0 0 .6rem}
-section.panoramica ol{list-style:none;margin:0;padding:0}
-section.panoramica li{display:grid;grid-template-columns:minmax(8.5rem,11rem) 1fr;gap:.1rem 1rem;padding:.55rem 0;
- border-top:1px solid var(--riga)}
-section.panoramica li:first-child{border-top:0}
-section.panoramica .g{font:600 .95rem/1.4 Inter,sans-serif;color:var(--blu)}
-section.panoramica .g.vuoto{color:var(--tenue);font-weight:400}
-section.panoramica a{font:600 1rem/1.35 Inter,sans-serif;color:var(--testo);text-decoration-color:var(--blu)}
-section.panoramica .c{grid-column:2;color:var(--tenue);font-size:.95rem}
-@media (max-width:34rem){section.panoramica li{grid-template-columns:1fr}section.panoramica .c{grid-column:1}}
-h2.tutte{font:600 1.4rem/1.2 Inter,sans-serif;margin:2rem 0 1rem}
-@media print{.testata{background:#fff;color:var(--notte)}.testata .date,.testata .sopra{color:var(--blu)}.indietro{display:none}
- article.lezione{break-inside:avoid}}
+/* il logo */
+.logo{--l1:var(--notte);--l2:var(--blu);overflow:visible}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .logo{--l1:#E8ECF5;--l2:var(--blu)}}
+.logo.chiaro{--l1:#fff;--l2:var(--cielo)}
+.logo path{fill:none;stroke-width:166;stroke-linecap:round;stroke:var(--l1)}
+.logo .arco-b{stroke:var(--l2)}.logo .punto{fill:var(--l1)}.logo .puntino{fill:var(--l2)}
+.logo>*{transform-box:view-box;transform-origin:566px 566px;transition:transform .45s cubic-bezier(.4,0,.2,1),stroke .3s,fill .3s}
+.ingresso .titolo{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.ingresso .titolo .logo{width:clamp(7rem,24vw,15rem);height:auto;flex:none}
+/* all'ingresso il logo si compone una volta: gli archi si disegnano, i cerchi arrivano */
+.ingresso .logo.grande path{stroke-dasharray:960;stroke-dashoffset:960;animation:disegna 1.1s .15s cubic-bezier(.5,0,.2,1) forwards}
+.ingresso .logo.grande .arco-b{animation-delay:.35s}
+.ingresso .logo.grande .punto{transform:scale(0);animation:cresce .6s .7s cubic-bezier(.3,1.4,.5,1) forwards}
+.ingresso .logo.grande .puntino{transform:translate(-268px,-277px) scale(.2);opacity:0;
+ animation:entra .8s .95s cubic-bezier(.3,1.2,.5,1) forwards}
+@keyframes disegna{to{stroke-dashoffset:0}}
+@keyframes cresce{to{transform:scale(1)}}
+@keyframes entra{to{transform:none;opacity:1}}
+/* l'apertura (script APERTURA): un velo blu notte e il logo che vola, si apre e fa passare */
+.velo{position:fixed;inset:0;z-index:50;background:var(--notte);pointer-events:none}
+.velo .logo{position:fixed}
+/* l'arrivo (script ARRIVO): la pagina emerge dal bianco e il logo della testata si richiude */
+html.arrivo body::after{content:"";position:fixed;inset:0;z-index:60;background:var(--fondo);pointer-events:none;
+ animation:svela .7s .05s ease-out forwards}
+html.arrivo .logo.arrivo .arco-a{animation:chiudi-a .9s .15s cubic-bezier(.3,1.3,.5,1) both}
+html.arrivo .logo.arrivo .arco-b{animation:chiudi-b .9s .15s cubic-bezier(.3,1.3,.5,1) both}
+html.arrivo .logo.arrivo .puntino{animation:esce .8s .35s cubic-bezier(.3,1.2,.5,1) both}
+@keyframes svela{to{opacity:0;visibility:hidden}}
+@keyframes chiudi-a{from{transform:rotate(40deg)}to{transform:none}}
+@keyframes chiudi-b{from{transform:rotate(-40deg)}to{transform:none}}
+@keyframes esce{from{transform:translate(-268px,-277px)}to{transform:none}}
+@media (max-width:34rem){.ingresso .titolo{flex-direction:column-reverse;align-items:flex-start;gap:1.4rem}
+ .ingresso .titolo .logo{width:5.5rem}}
+@media (prefers-reduced-motion:reduce){.logo *,html.arrivo body::after{animation:none!important;transform:none!important;
+ stroke-dashoffset:0!important;opacity:1!important}html.arrivo body::after{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}@view-transition{navigation:none}}
+@media print{.testata{background:#fff;color:var(--notte)}.indietro{display:none}h2.data{position:static}
+ section.giorno{break-inside:avoid}}
 </style>
+<script>(function(){try{var f=location.pathname.split('/').pop()||'index.html';
+if(sessionStorage.getItem('apertura')===f){sessionStorage.removeItem('apertura');
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('arrivo');}}catch(e){}})();</script>
 </head>
-<body>
-<a class="salta" href="#principale">Vai alla panoramica</a>
+<body class="area">
+<a class="salta" href="#principale">Vai alle lezioni</a>
 <header class="testata">
- <div class="riga-loghi">
-  <img class="unipi" src="img/marchio_unipi_bianco.png" alt="Università di Pisa" width="1234" height="419">
-  <img class="evento" src="img/logo_evento_negativo.png" alt="" width="227" height="227">
+ <div class="cornice">
+  <div class="loghi">
+   <img class="unipi" src="img/marchio_unipi_bianco.png" alt="Università di Pisa" width="1234" height="419">
+  </div>
+  <div class="titolo"><div><a class="indietro" href="index.html">← Tutte le aree</a><h1>Medicina e Farmacia</h1><p class="quante">14 lezioni, dal 17 novembre al 2 dicembre</p></div><svg class="logo grande chiaro arrivo" viewBox="60 76 1014 1004" aria-hidden="true" focusable="false"><path class="arco-a" d="M491,951.8 A393,393 0 0 1 363.6,229.1"/><path class="arco-b" d="M694,194.4 A393,393 0 0 1 951.8,491"/><circle class="punto" cx="566" cy="566" r="146"/><circle class="puntino" cx="834" cy="843" r="98"/></svg></div>
  </div>
- <div class="titolo"><a class="indietro" href="index.html">← Tutte le aree</a><p class="sopra">Lezioni aperte sulla disabilità</p><h1 class="area">Medicina e Farmacia</h1><p class="sotto">14 lezioni · dal 17 novembre al 2 dicembre · aggiornato al 27 ottobre 2026</p></div>
 </header>
-<main id="principale">
-<section class="panoramica" aria-labelledby="t-pan"><h2 id="t-pan">Panoramica</h2><ol><li><span class="g">Martedì 17 novembre</span><a href="#l58">Le basi molecolari dei disturbi del neurosviluppo (DSA, ADHD, ASD, disturbi del linguaggio).</a><span class="c">Eleonora Da Pozzo</span></li><li><span class="g">Venerdì 20 novembre</span><a href="#l14">La disabilità uditiva in età evolutiva.</a><span class="c">Francesca Forli</span></li><li><span class="g">Martedì 24 novembre</span><a href="#l53">Intelligenza Artificiale e nuove tecnologie nelle mani del neuropsichiatra infantile.</a><span class="c">Giuseppina Sgandurra e Roberta Battini</span></li><li><span class="g">Giovedì 26 novembre</span><a href="#l73">Comunicare efficacemente con il paziente sordo: strategie e strumenti per la relazione sanitaria.</a><span class="c">Ciro Conversano, Riccardo Ruffoli e Laura Mazzoni</span></li><li><span class="g">Mercoledì 2 dicembre</span><a href="#l76">Anatomia funzionale delle vie del linguaggio: cosa cambia nella persona sorda.</a><span class="c">Riccardo Ruffoli e Laura Mazzoni</span></li><li><span class="g vuoto">da comunicare</span><a href="#l06">Adattamento di misure di prevenzione e protezione ai lavoratori con disabilità.</a><span class="c">Rudy Foddis</span></li><li><span class="g vuoto">da comunicare</span><a href="#l28">Progettare terapie accessibili: formulazioni farmaceutiche, dispositivi di somministrazione e ruolo del farmacista</a><span class="c">Patrizia Chetoni</span></li><li><span class="g vuoto">da comunicare</span><a href="#l33">La gestione di pazienti disabili con lesioni da pressione.</a><span class="c">Marco Romanelli</span></li><li><span class="g vuoto">da comunicare</span><a href="#l34">MALATTIE RARE E DISABILITA’ NEL BAMBINO E ADOLESCENTE.</a><span class="c">Diego Peroni</span></li><li><span class="g vuoto">da comunicare</span><a href="#l40">Comprendere l’autismo: caratteristiche psicologiche, variabilità e paradigma della neurodiversità.</a><span class="c">Sara Calderoni</span></li><li><span class="g vuoto">da comunicare</span><a href="#l48">AFA e Prescrizione dell’esercizio nelle disabilità fisiche e psichiche: lo sport come strumento di salute, autonomia e inclusione.</a><span class="c">Ferdinando Franzoni</span></li><li><span class="g vuoto">da comunicare</span><a href="#l55">Nuovi approcci tecnologici per la riabilitazione delle Paralisi Cerebrali.</a><span class="c">Sgandurra Giuseppina</span></li><li><span class="g vuoto">da comunicare</span><a href="#l71">Strategie formulative per l’inclusione</a><span class="c">Anna Maria Piras e Chiara Migone</span></li><li><span class="g vuoto">da comunicare</span><a href="#l82">Il medicinale è davvero accessibile? Disabilità e autonomia nella somministrazione</a><span class="c">Susi Burgalassi</span></li></ol></section><h2 class="tutte">Le lezioni</h2><div class="griglia"><article class="lezione"><p class="quando">Martedì 17 novembre 2026 · ore 13:45–15:15</p><h3 id="l58">Le basi molecolari dei disturbi del neurosviluppo (DSA, ADHD, ASD, disturbi del linguaggio).</h3><p class="chi"><strong>Eleonora Da Pozzo</strong></p><p class="dove-didattica">Dipartimento di Farmacia · Laurea Magistrale Ciclo Unico in Chimica E Tecnologia Farmaceutiche · Insegnamento: BASI BIOCHIMICHE DELL’AZIONE DEI FARMACI (306EE)</p><p class="aula"><span class="etichetta">Aula</span> SR G1 — Polo San Rossore 1938, Via Risorgimento 19</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">La lezione illustrerà i meccanismi molecolari e neurobiologici alla base dei principali disturbi del neurosviluppo, con particolare attenzione alle interazioni tra fattori genetici, epigenetici e ambientali. Verranno discussi i processi che regolano lo sviluppo e la plasticità delle reti neuronali, le alterazioni delle vie di segnalazione cellulare e dei neurotrasmettitori, nonché il loro impatto sulle funzioni cognitive, linguistiche e comportamentali. Saranno inoltre presentati esempi di biomarcatori associati a tali condizioni e le principali strategie terapeutiche attualmente impiegate o in fase di sviluppo.</p><div class="piede"><span class="codice">L58</span></div></article><article class="lezione"><p class="quando">Venerdì 20 novembre 2026 · ore 08:30–10:10</p><h3 id="l14">La disabilità uditiva in età evolutiva.</h3><p class="chi"><strong>Francesca Forli</strong></p><p class="dove-didattica">Dipartimento di Patologia chirurgica, medica, molecolare e dell’area critica · Corso di Laurea in Medicina e Chirurgia. · Insegnamento: Corso integrato Malattie degli Organi di Senso (022FF). Audiologia e Foniatria</p><p class="aula"><span class="etichetta">Aula</span> PN 5 — Polo Porta Nuova, Via Pietrasantina angolo via Nelli</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">La lezione affronta la disabilità uditiva in età evolutiva, sottolineando come la diagnosi e il trattamento precoci della sordità infantile siano essenziali per prevenirne le conseguenze sullo sviluppo del linguaggio, sulle abilità cognitive e relazionali, sugli apprendimenti scolastici e sulla crescita globale del bambino. Verranno illustrati il ruolo dello screening audiologico neonatale nell’identificazione precoce, il percorso di diagnosi audiologica e le opzioni di trattamento protesico e riabilitativo, dalle protesi acustiche all’impianto cocleare.</p><div class="piede"><span class="codice">L14</span></div></article><article class="lezione"><p class="quando">Martedì 24 novembre 2026 · ore 13:30–16:00</p><h3 id="l53">Intelligenza Artificiale e nuove tecnologie nelle mani del neuropsichiatra infantile.</h3><p class="chi"><strong>Giuseppina Sgandurra e Roberta Battini</strong></p><p class="dove-didattica">Dipartimento di Medicina clinica e sperimentale · Laurea Magistrale Ciclo Unico Medicina E Chirurgia · Insegnamento: SCIENZE PEDIATRICHE (033FF)</p><p class="aula"><span class="etichetta">Aula</span> Cis 1 — Edificio 30c, Via Paradisa 2</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">Intelligenza Artificiale e nuove tecnologie stanno trasformando la neuropsichiatria infantile, offrendo nuovi strumenti per valutare, monitorare e trattare i disturbi del neurosviluppo ed in particolare nei disturbi del movimento. Digital biomarkers, sistemi indossabili, robotica, teleriabilitazione e AI consentono di integrare dati clinici e comportamentali, personalizzando i percorsi di cura. La lezione esplorerà opportunità e criticità di queste tecnologie, ponendo al centro il ruolo del neuropsichiatra infantile nel tradurre l’innovazione in strumenti clinicamente significativi, sostenibili e realmente centrati sul bambino e sulla famiglia.</p><div class="piede"><span class="codice">L53</span></div></article><article class="lezione"><p class="quando">Giovedì 26 novembre 2026 · ore 14:30–18:30</p><h3 id="l73">Comunicare efficacemente con il paziente sordo: strategie e strumenti per la relazione sanitaria.</h3><p class="chi"><strong>Ciro Conversano, Riccardo Ruffoli e Laura Mazzoni</strong></p><p class="dove-didattica">Dipartimento di Patologia chirurgica, medica, molecolare e dell’area critica · Laurea Magistrale Ciclo Unico Medicina E Chirurgia · Insegnamento: LA COMUNICAZIONE IN SANITÀ: APPROCCI E STRUMENTI PER UN DIALOGO EFFICACE (0077M)</p><p class="aula"><span class="etichetta">Aula</span> Fib D1 — Polo Fibonacci B, Via Buonarroti 3</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">La sordità pone al medico un limite che non appartiene al paziente, ma alla relazione: l’assenza di una lingua condivisa. In quel vuoto affiorano emozioni che la formazione raramente tematizza, come impotenza, impazienza e disagio e che, non riconosciute, si fanno condotta. La lezione esplora le differenze tra commiserazione, empatia e compassione, ne discute i processi neurobiologici e la regolazione emotiva, e assume la LIS come lingua a pieno titolo. Interviene un’interprete LIS, che porta in aula la posizione del terzo nella relazione: ciò che vede chi sta fra il medico e il paziente. Co-docente: Prof. Riccardo Ruffoli, Università di Pisa Co-docente: Dott.ssa Laura Mazzoni, Università di Pisa</p><div class="piede"><span class="codice">L73</span></div></article><article class="lezione"><p class="quando">Mercoledì 2 dicembre 2026 · ore 11:00–12:30</p><h3 id="l76">Anatomia funzionale delle vie del linguaggio: cosa cambia nella persona sorda.</h3><p class="chi"><strong>Riccardo Ruffoli e Laura Mazzoni</strong></p><p class="dove-didattica">Dipartimento di Ricerca traslazionale e delle nuove tecnologie in Medicina e Chirurgia · Laurea Magistrale Ciclo Unico in Medicina E Chirurgia · Insegnamento: ANATOMIA UMANA (0025E)</p><p class="aula"><span class="etichetta">Aula</span> PN 8 — Polo Porta Nuova, Via Pietrasantina angolo via Nelli</p><p class="accesso"><span class="etichetta">Accessibilità</span> Aula accessibile.</p><p class="descr">La lezione ricostruisce le vie neurali dal suono alla comprensione e alla produzione della parola e il loro sviluppo con l’esperienza. Il confronto tra persone sorde segnanti, sorde oraliste e udenti consente di distinguere gli effetti della deprivazione uditiva da quelli dell’esperienza linguistica. Emerge un nucleo linguistico in gran parte condiviso, con ingressi sensoriali e uscite motorie differenti. L’impianto cocleare agisce sull’udito, mentre l’accesso precoce a una lingua, parlata o segnata, sostiene lo sviluppo linguistico: sono bisogni distinti e non alternativi.</p><div class="piede"><span class="codice">L76</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l06">Adattamento di misure di prevenzione e protezione ai lavoratori con disabilità.</h3><p class="chi"><strong>Rudy Foddis</strong></p><p class="dove-didattica">Dipartimento di Ricerca traslazionale e delle nuove tecnologie in Medicina e Chirurgia · Laurea in Tecniche Della Prevenzione Nell’Ambiente E Nei Luoghi Di Lavoro · Insegnamento: IGIENE AMBIENTALE (342FF)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L06</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l28">Progettare terapie accessibili: formulazioni farmaceutiche, dispositivi di somministrazione e ruolo del farmacista</h3><p class="chi"><strong>Patrizia Chetoni</strong></p><p class="dove-didattica">Dipartimento di Farmacia · Laurea Magistrale Ciclo Unico in Chimica E Tecnologia Farmaceutiche · Insegnamento: TECNOLOGIA E LEGISLAZIONE FARMACEUTICA (024CC)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L28</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l33">La gestione di pazienti disabili con lesioni da pressione.</h3><p class="chi"><strong>Marco Romanelli</strong></p><p class="dove-didattica">Dipartimento di Medicina clinica e sperimentale · Laurea Magistrale Ciclo Unico Medicina E Chirurgia</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L33</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l34">MALATTIE RARE E DISABILITA’ NEL BAMBINO E ADOLESCENTE.</h3><p class="chi"><strong>Diego Peroni</strong></p><p class="dove-didattica">Dipartimento di Medicina clinica e sperimentale · Laurea Magistrale Ciclo Unico Medicina E Chirurgia · Insegnamento: PEDIATRIA (033FF)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L34</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l40">Comprendere l’autismo: caratteristiche psicologiche, variabilità e paradigma della neurodiversità.</h3><p class="chi"><strong>Sara Calderoni</strong></p><p class="dove-didattica">Dipartimento di Medicina clinica e sperimentale · Laurea Magistrale in Psicologia Clinica E Scienze Comportamentali · Insegnamento: NEUROFISIOLOGIA CLINICA E PSICOPATOLOGIA DELL’ETÀ EVOLUTIVA (409FF)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L40</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l48">AFA e Prescrizione dell’esercizio nelle disabilità fisiche e psichiche: lo sport come strumento di salute, autonomia e inclusione.</h3><p class="chi"><strong>Ferdinando Franzoni</strong></p><p class="dove-didattica">Dipartimento di Medicina clinica e sperimentale · Laurea in Scienze Motorie · Insegnamento: TEORIA E METODOLOGIA DELL’ALLENAMENTO NEGLI SPORT DI SQUADRA (0042M)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L48</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l55">Nuovi approcci tecnologici per la riabilitazione delle Paralisi Cerebrali.</h3><p class="chi"><strong>Sgandurra Giuseppina</strong></p><p class="dove-didattica">Dipartimento di Medicina clinica e sperimentale · Laurea in Terapia Della Neuro E Psicomotricità Dell’Età Evolutiva · Insegnamento: MEDICINA FISICA E RIABILITATIVA (191FF)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L55</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l71">Strategie formulative per l’inclusione</h3><p class="chi"><strong>Anna Maria Piras e Chiara Migone</strong></p><p class="dove-didattica">Dipartimento di Farmacia · Laurea in Scienze Dei Prodotti Erboristici E Della Salute · Insegnamento: FORMULAZIONE E LEGISLAZIONE DEI PRODOTTI SALUTISTICI E COSMETICI II (386CC)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L71</span></div></article><article class="lezione"><p class="quando vuoto">Giorno e orario da comunicare</p><h3 id="l82">Il medicinale è davvero accessibile? Disabilità e autonomia nella somministrazione</h3><p class="chi"><strong>Susi Burgalassi</strong></p><p class="dove-didattica">Dipartimento di Farmacia · Laurea Magistrale Ciclo Unico in Chimica E Tecnologia Farmaceutiche · Insegnamento: FABBRICAZIONE INDUSTRIALE DEI MEDICINALI CON ASPETTI REGOLATORI (285CC)</p><p class="aula"><span class="etichetta">Aula</span> Aula da comunicare</p><p class="accesso"><span class="etichetta">Accessibilità</span> Accessibilità dell’aula da comunicare.</p><p class="vuoto">Descrizione da comunicare.</p><div class="piede"><span class="codice">L82</span></div></article></div>
+<main id="principale" class="cornice">
+<section class="giorno"><h2 class="data"><span class="num">17</span><span class="mese">novembre</span><span class="sett">martedì</span></h2><div class="lezioni"><article class="lezione"><p class="ora">ore 13:45–15:15</p><h3 id="l58">Le basi molecolari dei disturbi del neurosviluppo (DSA, ADHD, ASD, disturbi del linguaggio).</h3><p class="chi">Eleonora Da Pozzo</p><p class="descr">La lezione illustrerà i meccanismi molecolari e neurobiologici alla base dei principali disturbi del neurosviluppo, con particolare attenzione alle interazioni tra fattori genetici, epigenetici e ambientali. Verranno discussi i processi che regolano lo sviluppo e la plasticità delle reti neuronali, le alterazioni delle vie di segnalazione cellulare e dei neurotrasmettitori, nonché il loro impatto sulle funzioni cognitive, linguistiche e comportamentali. Saranno inoltre presentati esempi di biomarcatori associati a tali condizioni e le principali strategie terapeutiche attualmente impiegate o in fase di sviluppo.</p><dl class="info"><div><dt>Aula</dt><dd>SR G1 — Polo San Rossore 1938, Via Risorgimento 19</dd></div><div><dt>Accessibilità</dt><dd>Aula accessibile.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Farmacia<br>Laurea Magistrale Ciclo Unico in Chimica E Tecnologia Farmaceutiche<br>Insegnamento: BASI BIOCHIMICHE DELL’AZIONE DEI FARMACI (306EE)</dd></div></dl></article></div></section><section class="giorno"><h2 class="data"><span class="num">20</span><span class="mese">novembre</span><span class="sett">venerdì</span></h2><div class="lezioni"><article class="lezione"><p class="ora">ore 08:30–10:10</p><h3 id="l14">La disabilità uditiva in età evolutiva.</h3><p class="chi">Francesca Forli</p><p class="descr">La lezione affronta la disabilità uditiva in età evolutiva, sottolineando come la diagnosi e il trattamento precoci della sordità infantile siano essenziali per prevenirne le conseguenze sullo sviluppo del linguaggio, sulle abilità cognitive e relazionali, sugli apprendimenti scolastici e sulla crescita globale del bambino. Verranno illustrati il ruolo dello screening audiologico neonatale nell’identificazione precoce, il percorso di diagnosi audiologica e le opzioni di trattamento protesico e riabilitativo, dalle protesi acustiche all’impianto cocleare.</p><dl class="info"><div><dt>Aula</dt><dd>PN 5 — Polo Porta Nuova, Via Pietrasantina angolo via Nelli</dd></div><div><dt>Accessibilità</dt><dd>Aula accessibile.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Patologia chirurgica, medica, molecolare e dell’area critica<br>Corso di Laurea in Medicina e Chirurgia.<br>Insegnamento: Corso integrato Malattie degli Organi di Senso (022FF). Audiologia e Foniatria</dd></div></dl></article></div></section><section class="giorno"><h2 class="data"><span class="num">24</span><span class="mese">novembre</span><span class="sett">martedì</span></h2><div class="lezioni"><article class="lezione"><p class="ora">ore 13:30–16:00</p><h3 id="l53">Intelligenza Artificiale e nuove tecnologie nelle mani del neuropsichiatra infantile.</h3><p class="chi">Giuseppina Sgandurra e Roberta Battini</p><p class="descr">Intelligenza Artificiale e nuove tecnologie stanno trasformando la neuropsichiatria infantile, offrendo nuovi strumenti per valutare, monitorare e trattare i disturbi del neurosviluppo ed in particolare nei disturbi del movimento. Digital biomarkers, sistemi indossabili, robotica, teleriabilitazione e AI consentono di integrare dati clinici e comportamentali, personalizzando i percorsi di cura. La lezione esplorerà opportunità e criticità di queste tecnologie, ponendo al centro il ruolo del neuropsichiatra infantile nel tradurre l’innovazione in strumenti clinicamente significativi, sostenibili e realmente centrati sul bambino e sulla famiglia.</p><dl class="info"><div><dt>Aula</dt><dd>Cis 1 — Edificio 30c, Via Paradisa 2</dd></div><div><dt>Accessibilità</dt><dd>Aula accessibile.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Medicina clinica e sperimentale<br>Laurea Magistrale Ciclo Unico Medicina E Chirurgia<br>Insegnamento: SCIENZE PEDIATRICHE (033FF)</dd></div></dl></article></div></section><section class="giorno"><h2 class="data"><span class="num">26</span><span class="mese">novembre</span><span class="sett">giovedì</span></h2><div class="lezioni"><article class="lezione"><p class="ora">ore 14:30–18:30</p><h3 id="l73">Comunicare efficacemente con il paziente sordo: strategie e strumenti per la relazione sanitaria.</h3><p class="chi">Ciro Conversano, Riccardo Ruffoli e Laura Mazzoni</p><p class="descr">La sordità pone al medico un limite che non appartiene al paziente, ma alla relazione: l’assenza di una lingua condivisa. In quel vuoto affiorano emozioni che la formazione raramente tematizza, come impotenza, impazienza e disagio e che, non riconosciute, si fanno condotta. La lezione esplora le differenze tra commiserazione, empatia e compassione, ne discute i processi neurobiologici e la regolazione emotiva, e assume la LIS come lingua a pieno titolo. Interviene un’interprete LIS, che porta in aula la posizione del terzo nella relazione: ciò che vede chi sta fra il medico e il paziente. Co-docente: Prof. Riccardo Ruffoli, Università di Pisa Co-docente: Dott.ssa Laura Mazzoni, Università di Pisa</p><dl class="info"><div><dt>Aula</dt><dd>Fib D1 — Polo Fibonacci B, Via Buonarroti 3</dd></div><div><dt>Accessibilità</dt><dd>Aula accessibile.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Patologia chirurgica, medica, molecolare e dell’area critica<br>Laurea Magistrale Ciclo Unico Medicina E Chirurgia<br>Insegnamento: LA COMUNICAZIONE IN SANITÀ: APPROCCI E STRUMENTI PER UN DIALOGO EFFICACE (0077M)</dd></div></dl></article></div></section><section class="giorno"><h2 class="data"><span class="num">2</span><span class="mese">dicembre</span><span class="sett">mercoledì</span></h2><div class="lezioni"><article class="lezione"><p class="ora">ore 11:00–12:30</p><h3 id="l76">Anatomia funzionale delle vie del linguaggio: cosa cambia nella persona sorda.</h3><p class="chi">Riccardo Ruffoli e Laura Mazzoni</p><p class="descr">La lezione ricostruisce le vie neurali dal suono alla comprensione e alla produzione della parola e il loro sviluppo con l’esperienza. Il confronto tra persone sorde segnanti, sorde oraliste e udenti consente di distinguere gli effetti della deprivazione uditiva da quelli dell’esperienza linguistica. Emerge un nucleo linguistico in gran parte condiviso, con ingressi sensoriali e uscite motorie differenti. L’impianto cocleare agisce sull’udito, mentre l’accesso precoce a una lingua, parlata o segnata, sostiene lo sviluppo linguistico: sono bisogni distinti e non alternativi.</p><dl class="info"><div><dt>Aula</dt><dd>PN 8 — Polo Porta Nuova, Via Pietrasantina angolo via Nelli</dd></div><div><dt>Accessibilità</dt><dd>Aula accessibile.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Ricerca traslazionale e delle nuove tecnologie in Medicina e Chirurgia<br>Laurea Magistrale Ciclo Unico in Medicina E Chirurgia<br>Insegnamento: ANATOMIA UMANA (0025E)</dd></div></dl></article></div></section><section class="giorno"><h2 class="data senza"><span class="num">Giorno da comunicare</span></h2><div class="lezioni"><article class="lezione"><p class="ora tenue">orario da comunicare</p><h3 id="l06">Adattamento di misure di prevenzione e protezione ai lavoratori con disabilità.</h3><p class="chi">Rudy Foddis</p><p class="descr tenue">Descrizione da comunicare.</p><dl class="info"><div><dt>Aula</dt><dd>aula da comunicare</dd></div><div><dt>Accessibilità</dt><dd>Accessibilità dell’aula da comunicare.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Ricerca traslazionale e delle nuove tecnologie in Medicina e Chirurgia<br>Laurea in Tecniche Della Prevenzione Nell’Ambiente E Nei Luoghi Di Lavoro<br>Insegnamento: IGIENE AMBIENTALE (342FF)</dd></div></dl></article><article class="lezione"><p class="ora tenue">orario da comunicare</p><h3 id="l28">Progettare terapie accessibili: formulazioni farmaceutiche, dispositivi di somministrazione e ruolo del farmacista</h3><p class="chi">Patrizia Chetoni</p><p class="descr tenue">Descrizione da comunicare.</p><dl class="info"><div><dt>Aula</dt><dd>aula da comunicare</dd></div><div><dt>Accessibilità</dt><dd>Accessibilità dell’aula da comunicare.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Farmacia<br>Laurea Magistrale Ciclo Unico in Chimica E Tecnologia Farmaceutiche<br>Insegnamento: TECNOLOGIA E LEGISLAZIONE FARMACEUTICA (024CC)</dd></div></dl></article><article class="lezione"><p class="ora tenue">orario da comunicare</p><h3 id="l33">La gestione di pazienti disabili con lesioni da pressione.</h3><p class="chi">Marco Romanelli</p><p class="descr tenue">Descrizione da comunicare.</p><dl class="info"><div><dt>Aula</dt><dd>aula da comunicare</dd></div><div><dt>Accessibilità</dt><dd>Accessibilità dell’aula da comunicare.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Medicina clinica e sperimentale<br>Laurea Magistrale Ciclo Unico Medicina E Chirurgia</dd></div></dl></article><article class="lezione"><p class="ora tenue">orario da comunicare</p><h3 id="l34">MALATTIE RARE E DISABILITA’ NEL BAMBINO E ADOLESCENTE.</h3><p class="chi">Diego Peroni</p><p class="descr tenue">Descrizione da comunicare.</p><dl class="info"><div><dt>Aula</dt><dd>aula da comunicare</dd></div><div><dt>Accessibilità</dt><dd>Accessibilità dell’aula da comunicare.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Medicina clinica e sperimentale<br>Laurea Magistrale Ciclo Unico Medicina E Chirurgia<br>Insegnamento: PEDIATRIA (033FF)</dd></div></dl></article><article class="lezione"><p class="ora tenue">orario da comunicare</p><h3 id="l40">Comprendere l’autismo: caratteristiche psicologiche, variabilità e paradigma della neurodiversità.</h3><p class="chi">Sara Calderoni</p><p class="descr tenue">Descrizione da comunicare.</p><dl class="info"><div><dt>Aula</dt><dd>aula da comunicare</dd></div><div><dt>Accessibilità</dt><dd>Accessibilità dell’aula da comunicare.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Medicina clinica e sperimentale<br>Laurea Magistrale in Psicologia Clinica E Scienze Comportamentali<br>Insegnamento: NEUROFISIOLOGIA CLINICA E PSICOPATOLOGIA DELL’ETÀ EVOLUTIVA (409FF)</dd></div></dl></article><article class="lezione"><p class="ora tenue">orario da comunicare</p><h3 id="l48">AFA e Prescrizione dell’esercizio nelle disabilità fisiche e psichiche: lo sport come strumento di salute, autonomia e inclusione.</h3><p class="chi">Ferdinando Franzoni</p><p class="descr tenue">Descrizione da comunicare.</p><dl class="info"><div><dt>Aula</dt><dd>aula da comunicare</dd></div><div><dt>Accessibilità</dt><dd>Accessibilità dell’aula da comunicare.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Medicina clinica e sperimentale<br>Laurea in Scienze Motorie<br>Insegnamento: TEORIA E METODOLOGIA DELL’ALLENAMENTO NEGLI SPORT DI SQUADRA (0042M)</dd></div></dl></article><article class="lezione"><p class="ora tenue">orario da comunicare</p><h3 id="l55">Nuovi approcci tecnologici per la riabilitazione delle Paralisi Cerebrali.</h3><p class="chi">Sgandurra Giuseppina</p><p class="descr tenue">Descrizione da comunicare.</p><dl class="info"><div><dt>Aula</dt><dd>aula da comunicare</dd></div><div><dt>Accessibilità</dt><dd>Accessibilità dell’aula da comunicare.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Medicina clinica e sperimentale<br>Laurea in Terapia Della Neuro E Psicomotricità Dell’Età Evolutiva<br>Insegnamento: MEDICINA FISICA E RIABILITATIVA (191FF)</dd></div></dl></article><article class="lezione"><p class="ora tenue">orario da comunicare</p><h3 id="l71">Strategie formulative per l’inclusione</h3><p class="chi">Anna Maria Piras e Chiara Migone</p><p class="descr tenue">Descrizione da comunicare.</p><dl class="info"><div><dt>Aula</dt><dd>aula da comunicare</dd></div><div><dt>Accessibilità</dt><dd>Accessibilità dell’aula da comunicare.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Farmacia<br>Laurea in Scienze Dei Prodotti Erboristici E Della Salute<br>Insegnamento: FORMULAZIONE E LEGISLAZIONE DEI PRODOTTI SALUTISTICI E COSMETICI II (386CC)</dd></div></dl></article><article class="lezione"><p class="ora tenue">orario da comunicare</p><h3 id="l82">Il medicinale è davvero accessibile? Disabilità e autonomia nella somministrazione</h3><p class="chi">Susi Burgalassi</p><p class="descr tenue">Descrizione da comunicare.</p><dl class="info"><div><dt>Aula</dt><dd>aula da comunicare</dd></div><div><dt>Accessibilità</dt><dd>Accessibilità dell’aula da comunicare.</dd></div><div><dt>Nei corsi</dt><dd>Dipartimento di Farmacia<br>Laurea Magistrale Ciclo Unico in Chimica E Tecnologia Farmaceutiche<br>Insegnamento: FABBRICAZIONE INDUSTRIALE DEI MEDICINALI CON ASPETTI REGOLATORI (285CC)</dd></div></dl></article></div></section><p class="resto">Aggiornato al 27 ottobre 2026.</p>
 </main>
 <footer>
- <div class="dentro">
+ <div class="cornice">
   <div>
    <p>Delegato del Rettore per l’inclusione degli studenti e del personale con disabilità e DSA</p>
    <p>USID – Ufficio Servizi per l’Inclusione di studenti con Disabilità</p>
-   <p>CUG – Comitato Unico di Garanzia · con i docenti referenti di Dipartimento per la disabilità</p>
+   <p>CUG – Comitato Unico di Garanzia, con i docenti referenti di Dipartimento per la disabilità</p>
    <p><a href="mailto:usid@unipi.it">usid@unipi.it</a></p>
-   <p>Aree dei corsi dalle pagine dei corsi di laurea di unipi.it, lette il 27/10/2026.</p>
+   <p>Aree come sulle pagine dei corsi di laurea di unipi.it (lette il 27/10/2026).</p>
   </div>
   <img src="img/logo_usid.png" alt="USID – Ufficio Servizi per l’Inclusione, Università di Pisa" width="250" height="250">
  </div>
 </footer>
+<script>(function(){
+var ridotto=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function vai(a){try{sessionStorage.setItem('apertura',a.getAttribute('href'));}catch(e){}location.href=a.href;}
+function apri(a){
+ var src=a.querySelector('svg.logo'),r=src.getBoundingClientRect(),W=innerWidth,H=innerHeight;
+ var v=document.createElement('div');v.className='velo';v.setAttribute('aria-hidden','true');
+ var L=src.cloneNode(true);v.appendChild(L);document.body.appendChild(v);
+ var lato=Math.min(W,H)*.42,cx=W/2,cy=H/2,ox=r.left+r.width/2,oy=r.top+r.height/2;
+ L.style.left=(cx-lato/2)+'px';L.style.top=(cy-lato/2)+'px';L.style.width=lato+'px';L.style.height=lato+'px';
+ var curva='cubic-bezier(.65,0,.25,1)',D=Math.hypot(W,H);
+ v.animate([{clipPath:'circle(0px at '+ox+'px '+oy+'px)'},{clipPath:'circle('+D+'px at '+ox+'px '+oy+'px)'}],
+  {duration:560,easing:curva,fill:'forwards'});
+ L.animate([{transform:'translate('+(ox-cx)+'px,'+(oy-cy)+'px) scale('+(r.width/lato)+')'},{transform:'none'}],
+  {duration:560,easing:curva,fill:'forwards'});
+ setTimeout(function(){L.classList.add('chiaro');},260);
+ var q=function(s){return L.querySelector(s);},t0=520;
+ q('.arco-a').animate([{transform:'rotate(0)'},{transform:'rotate(42deg)'}],{duration:560,delay:t0,easing:curva,fill:'forwards'});
+ q('.arco-b').animate([{transform:'rotate(0)'},{transform:'rotate(-42deg)'}],{duration:560,delay:t0,easing:curva,fill:'forwards'});
+ q('.puntino').animate([{transform:'none',opacity:1},{transform:'translate(-268px,-277px) scale(.6)',opacity:1,offset:.85},
+  {transform:'translate(-268px,-277px) scale(.2)',opacity:0}],{duration:620,delay:t0+180,easing:curva,fill:'forwards'});
+ var p=q('.punto');p.style.fill=getComputedStyle(document.body).backgroundColor;
+ var su=D/(146/1014*lato)*1.1;
+ p.animate([{transform:'scale(1)'},{transform:'scale('+su+')'}],{duration:620,delay:t0+520,easing:'cubic-bezier(.7,0,.4,1)',fill:'forwards'})
+  .finished.then(function(){vai(a);});
+}
+document.querySelectorAll('ul.aree a').forEach(function(a){a.addEventListener('click',function(ev){
+ if(ridotto||ev.defaultPrevented||ev.button||ev.metaKey||ev.ctrlKey||ev.shiftKey||ev.altKey||!a.animate)return;
+ ev.preventDefault();apri(a);});});
+addEventListener('pageshow',function(){document.querySelectorAll('.velo').forEach(function(v){v.remove();});});
+})();</script>
 </body>
 </html>
