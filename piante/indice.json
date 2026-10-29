@@ -4,8 +4,9 @@
   "codice": "A06",
   "titolo": "Piano Terra — Stato Attuale, 1:400 (Tav. I)",
   "piano": "piano terra",
-  "dwg": "Palazzo della Sapienza (A06)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo della Sapienza (A06)",
   "riquadro": [
    [
     43.71705104055269,
@@ -22,8 +23,9 @@
   "codice": "A06",
   "titolo": "Piano primo — Stato Attuale",
   "piano": "piano primo",
-  "dwg": "Palazzo della Sapienza (A06)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo della Sapienza (A06)",
   "riquadro": [
    [
     43.717042651948816,
@@ -40,8 +42,9 @@
   "codice": "A06",
   "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
-  "dwg": "Palazzo della Sapienza (A06)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo della Sapienza (A06)",
   "riquadro": [
    [
     43.71704203451322,
@@ -54,12 +57,127 @@
   ]
  },
  {
+  "file": "A11_pee_piano0.geojson",
+  "codice": "A11",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Carità (A11)",
+  "riquadro": [
+   [
+    43.71835145387987,
+    10.398061866985495
+   ],
+   [
+    43.71924070150604,
+    10.39877909786038
+   ]
+  ]
+ },
+ {
+  "file": "A11_pee_piano1.geojson",
+  "codice": "A11",
+  "titolo": "Piano primo — piano di emergenza ed evacuazione",
+  "piano": "piano primo",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Carità (A11)",
+  "riquadro": [
+   [
+    43.71835246717993,
+    10.398065867763354
+   ],
+   [
+    43.71923978066773,
+    10.398779229447856
+   ]
+  ]
+ },
+ {
+  "file": "A11_pee_piano2.geojson",
+  "codice": "A11",
+  "titolo": "Piano secondo — piano di emergenza ed evacuazione",
+  "piano": "piano secondo",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Carità (A11)",
+  "riquadro": [
+   [
+    43.7183540495627,
+    10.398072606488483
+   ],
+   [
+    43.719237759271195,
+    10.398781337664854
+   ]
+  ]
+ },
+ {
+  "file": "A17_pee_piano0.geojson",
+  "codice": "A17",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Boilleau (A17)",
+  "riquadro": [
+   [
+    43.71987267500597,
+    10.39668577310694
+   ],
+   [
+    43.720295600865384,
+    10.397279129633704
+   ]
+  ]
+ },
+ {
+  "file": "A22_pee_piano0.geojson",
+  "codice": "A22",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Polo Economia (A22)",
+  "riquadro": [
+   [
+    43.710365275561415,
+    10.40978189342796
+   ],
+   [
+    43.7112453947381,
+    10.41124588486672
+   ]
+  ]
+ },
+ {
+  "file": "A22_pee_piano1.geojson",
+  "codice": "A22",
+  "titolo": "Piano primo — piano di emergenza ed evacuazione",
+  "piano": "piano primo",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Polo Economia (A22)",
+  "riquadro": [
+   [
+    43.71053748184077,
+    10.409744710159975
+   ],
+   [
+    43.71117524915183,
+    10.411260487783172
+   ]
+  ]
+ },
+ {
   "file": "A26_piano0.geojson",
   "codice": "A26",
   "titolo": "Piano terra — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano terra",
-  "dwg": "Polo Carmignani",
   "fonte": "dove",
+  "scritte_dwg": 0,
+  "dwg": "Polo Carmignani",
   "riquadro": [
    [
     43.7199474,
@@ -76,8 +194,9 @@
   "codice": "A26",
   "titolo": "Piano primo — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano primo",
-  "dwg": "Polo Carmignani",
   "fonte": "dove",
+  "scritte_dwg": 0,
+  "dwg": "Polo Carmignani",
   "riquadro": [
    [
     43.719986,
@@ -90,12 +209,108 @@
   ]
  },
  {
+  "file": "A37_pee_pianom1.geojson",
+  "codice": "A37",
+  "titolo": "Piano seminterrato — piano di emergenza ed evacuazione",
+  "piano": "piano seminterrato",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Complesso Guidotti",
+  "riquadro": [
+   [
+    43.717189783895535,
+    10.392048019959129
+   ],
+   [
+    43.717626778273356,
+    10.392932181951913
+   ]
+  ]
+ },
+ {
+  "file": "A37_pee_piano0.geojson",
+  "codice": "A37",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Complesso Guidotti",
+  "riquadro": [
+   [
+    43.717188193836144,
+    10.392035534698975
+   ],
+   [
+    43.7176142434145,
+    10.39292642206058
+   ]
+  ]
+ },
+ {
+  "file": "A37_pee_piano1.geojson",
+  "codice": "A37",
+  "titolo": "Piano primo — piano di emergenza ed evacuazione",
+  "piano": "piano primo",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Complesso Guidotti",
+  "riquadro": [
+   [
+    43.71718756463789,
+    10.392046911373033
+   ],
+   [
+    43.7176124426297,
+    10.392924152802971
+   ]
+  ]
+ },
+ {
+  "file": "A38_pee_piano0.geojson",
+  "codice": "A38",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Polo San Rossore 1938",
+  "riquadro": [
+   [
+    43.71745253561878,
+    10.392157053320457
+   ],
+   [
+    43.71815947281661,
+    10.393267950702601
+   ]
+  ]
+ },
+ {
+  "file": "A38_pee_piano1.geojson",
+  "codice": "A38",
+  "titolo": "Piano primo — piano di emergenza ed evacuazione",
+  "piano": "piano primo",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Polo San Rossore 1938",
+  "riquadro": [
+   [
+    43.71758334920992,
+    10.392167359278737
+   ],
+   [
+    43.7181596426864,
+    10.393137173076077
+   ]
+  ]
+ },
+ {
   "file": "B03_p03.geojson",
   "codice": "B03",
   "titolo": "Piano Terra — Stato Attuale, 1:200 (Tav. I)",
   "piano": "piano terra",
-  "dwg": "Agraria, laboratori e officina, via del Borghetto 80 (B03)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Agraria, laboratori e officina, via del Borghetto 80 (B03)",
   "riquadro": [
    [
     43.7109433386606,
@@ -112,8 +327,9 @@
   "codice": "B09",
   "titolo": "Piano Terra — Stato Attuale, 1:400 (Tav. I)",
   "piano": "piano terra",
-  "dwg": "Agraria, via del Borghetto 80 (B09)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Agraria, via del Borghetto 80 (B09)",
   "riquadro": [
    [
     43.71119959362904,
@@ -130,8 +346,9 @@
   "codice": "B09",
   "titolo": "Piano primo — Stato Attuale",
   "piano": "piano primo",
-  "dwg": "Agraria, via del Borghetto 80 (B09)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Agraria, via del Borghetto 80 (B09)",
   "riquadro": [
    [
     43.711399355967934,
@@ -148,8 +365,9 @@
   "codice": "B09",
   "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
-  "dwg": "Agraria, via del Borghetto 80 (B09)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Agraria, via del Borghetto 80 (B09)",
   "riquadro": [
    [
     43.71139930433521,
@@ -162,12 +380,70 @@
   ]
  },
  {
+  "file": "B22_pee_piano0.geojson",
+  "codice": "B22",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Scienze Veterinarie, viale delle Piagge 2 (B22)",
+  "riquadro": [
+   [
+    43.70819406179693,
+    10.411234805013736
+   ],
+   [
+    43.70879047901526,
+    10.411956398249739
+   ]
+  ]
+ },
+ {
+  "file": "B22_pee_piano1.geojson",
+  "codice": "B22",
+  "titolo": "Piano primo — piano di emergenza ed evacuazione",
+  "piano": "piano primo",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Scienze Veterinarie, viale delle Piagge 2 (B22)",
+  "riquadro": [
+   [
+    43.70818814068116,
+    10.411224502848997
+   ],
+   [
+    43.708759149173304,
+    10.411898814636892
+   ]
+  ]
+ },
+ {
+  "file": "B45_pee_piano0.geojson",
+  "codice": "B45",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Ingegneria, ex Nucleare (B45)",
+  "riquadro": [
+   [
+    43.72127818191225,
+    10.388841718487054
+   ],
+   [
+    43.72161545634197,
+    10.389218891532186
+   ]
+  ]
+ },
+ {
   "file": "B46_piano0.geojson",
   "codice": "B46",
   "titolo": "Piano terra — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano terra",
-  "dwg": "Polo A, Ingegneria (B46)",
   "fonte": "dove",
+  "scritte_dwg": 0,
+  "dwg": "Polo A, Ingegneria (B46)",
   "riquadro": [
    [
     43.7205338,
@@ -184,8 +460,9 @@
   "codice": "B46",
   "titolo": "Piano primo — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano primo",
-  "dwg": "Polo A, Ingegneria (B46)",
   "fonte": "dove",
+  "scritte_dwg": 0,
+  "dwg": "Polo A, Ingegneria (B46)",
   "riquadro": [
    [
     43.7205348,
@@ -202,8 +479,9 @@
   "codice": "B46",
   "titolo": "Piano terzo — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano terzo",
-  "dwg": "Polo A, Ingegneria (B46)",
   "fonte": "dove",
+  "scritte_dwg": 0,
+  "dwg": "Polo A, Ingegneria (B46)",
   "riquadro": [
    [
     43.7207604,
@@ -220,8 +498,9 @@
   "codice": "B46",
   "titolo": "Piano quarto — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano quarto",
-  "dwg": "Polo A, Ingegneria (B46)",
   "fonte": "dove",
+  "scritte_dwg": 0,
+  "dwg": "Polo A, Ingegneria (B46)",
   "riquadro": [
    [
     43.7208007,
@@ -238,8 +517,9 @@
   "codice": "B46",
   "titolo": "Piano quinto — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano quinto",
-  "dwg": "Polo A, Ingegneria (B46)",
   "fonte": "dove",
+  "scritte_dwg": 0,
+  "dwg": "Polo A, Ingegneria (B46)",
   "riquadro": [
    [
     43.7207978,
@@ -252,12 +532,108 @@
   ]
  },
  {
+  "file": "B47_pee_piano0.geojson",
+  "codice": "B47",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Polo B, Ingegneria (B47)",
+  "riquadro": [
+   [
+    43.72187883465312,
+    10.388554318414194
+   ],
+   [
+    43.72248159074602,
+    10.389665981745214
+   ]
+  ]
+ },
+ {
+  "file": "B47_pee_piano1.geojson",
+  "codice": "B47",
+  "titolo": "Piano primo — piano di emergenza ed evacuazione",
+  "piano": "piano primo",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Polo B, Ingegneria (B47)",
+  "riquadro": [
+   [
+    43.72194133735495,
+    10.388625668479992
+   ],
+   [
+    43.7223633971667,
+    10.389477079083072
+   ]
+  ]
+ },
+ {
+  "file": "B54_pee_piano0.geojson",
+  "codice": "B54",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Ex Marzotto, edificio A (B54)",
+  "riquadro": [
+   [
+    43.71944807952589,
+    10.40741506372906
+   ],
+   [
+    43.72001043739796,
+    10.408326156777834
+   ]
+  ]
+ },
+ {
+  "file": "B56_pee_piano0.geojson",
+  "codice": "B56",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Polo Fibonacci, edificio D",
+  "riquadro": [
+   [
+    43.72008637529418,
+    10.408796450198551
+   ],
+   [
+    43.72119856434816,
+    10.409129037975486
+   ]
+  ]
+ },
+ {
+  "file": "B75_pee_piano0.geojson",
+  "codice": "B75",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Polo Etruria (B75)",
+  "riquadro": [
+   [
+    43.7203183065512,
+    10.387706913792202
+   ],
+   [
+    43.72110565050848,
+    10.388559712421653
+   ]
+  ]
+ },
+ {
   "file": "C01_p06.geojson",
   "codice": "C01",
   "titolo": "Piano Terra — Stato Attuale, 1:200 (Tav. I)",
   "piano": "piano terra",
-  "dwg": "Rettorato (C01)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Rettorato (C01)",
   "riquadro": [
    [
     43.71655785370987,
@@ -274,8 +650,9 @@
   "codice": "C01",
   "titolo": "Piano primo — Stato Attuale",
   "piano": "piano primo",
-  "dwg": "Rettorato (C01)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Rettorato (C01)",
   "riquadro": [
    [
     43.716577325292015,
@@ -292,8 +669,9 @@
   "codice": "C01",
   "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
-  "dwg": "Rettorato (C01)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Rettorato (C01)",
   "riquadro": [
    [
     43.71657483365744,
@@ -310,8 +688,9 @@
   "codice": "C01",
   "titolo": "Piano terzo — Stato Attuale",
   "piano": "piano terzo",
-  "dwg": "Rettorato (C01)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Rettorato (C01)",
   "riquadro": [
    [
     43.71657481077628,
@@ -328,8 +707,9 @@
   "codice": "C03",
   "titolo": "Piano Terra — Stato Attuale (Tav. I), 1:200",
   "piano": "piano terra",
-  "dwg": "Palazzo Vitelli (C03)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Vitelli (C03)",
   "riquadro": [
    [
     43.716512960907025,
@@ -346,8 +726,9 @@
   "codice": "C03",
   "titolo": "Piano ammezzato — Stato Attuale",
   "piano": "piano ammezzato",
-  "dwg": "Palazzo Vitelli (C03)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Vitelli (C03)",
   "riquadro": [
    [
     43.7165458523033,
@@ -364,8 +745,9 @@
   "codice": "C03",
   "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
-  "dwg": "Palazzo Vitelli (C03)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Vitelli (C03)",
   "riquadro": [
    [
     43.71651540770305,
@@ -378,12 +760,32 @@
   ]
  },
  {
+  "file": "D27_pee_piano0.geojson",
+  "codice": "D27",
+  "titolo": "Piano terra — piano di emergenza ed evacuazione",
+  "piano": "piano terra",
+  "fonte": "pee",
+  "scritte_dwg": 0,
+  "dwg": "Scuola Medica (D27)",
+  "riquadro": [
+   [
+    43.719823897291626,
+    10.394113238490812
+   ],
+   [
+    43.720794501873975,
+    10.395636212609691
+   ]
+  ]
+ },
+ {
   "file": "FAR_p05.geojson",
   "codice": "FAR",
   "titolo": "Piano seminterrato — Stato Attuale",
   "piano": "piano seminterrato",
-  "dwg": "Farmacia (FAR)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Farmacia (FAR)",
   "riquadro": [
    [
     43.71625447323443,
@@ -400,8 +802,9 @@
   "codice": "FAR",
   "titolo": "Piano Rialzato — Stato Attuale, 1:400 (Tav. IV)",
   "piano": "piano rialzato",
-  "dwg": "Farmacia (FAR)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Farmacia (FAR)",
   "riquadro": [
    [
     43.71628787518235,
@@ -418,8 +821,9 @@
   "codice": "FAR",
   "titolo": "Piano secondo — Stato Attuale",
   "piano": "piano secondo",
-  "dwg": "Farmacia (FAR)",
   "fonte": "rilievo",
+  "scritte_dwg": 0,
+  "dwg": "Farmacia (FAR)",
   "riquadro": [
    [
     43.71630598129778,
@@ -436,8 +840,9 @@
   "codice": "FIBB",
   "titolo": "Piano terra — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano terra",
-  "dwg": "Polo Fibonacci, edificio B",
   "fonte": "dove",
+  "scritte_dwg": 21,
+  "dwg": "Polo Fibonacci, edificio B",
   "riquadro": [
    [
     43.7200205,
@@ -454,8 +859,9 @@
   "codice": "FIBB",
   "titolo": "Piano primo — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano primo",
-  "dwg": "Polo Fibonacci, edificio B",
   "fonte": "dove",
+  "scritte_dwg": 20,
+  "dwg": "Polo Fibonacci, edificio B",
   "riquadro": [
    [
     43.7199599,
@@ -472,8 +878,9 @@
   "codice": "PIA",
   "titolo": "Piano terra — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano terra",
-  "dwg": "Polo Piagge",
   "fonte": "dove",
+  "scritte_dwg": 0,
+  "dwg": "Polo Piagge",
   "riquadro": [
    [
     43.710133,
@@ -490,8 +897,9 @@
   "codice": "PIA",
   "titolo": "Piano secondo — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano secondo",
-  "dwg": "Polo Piagge",
   "fonte": "dove",
+  "scritte_dwg": 0,
+  "dwg": "Polo Piagge",
   "riquadro": [
    [
     43.71027,
@@ -508,8 +916,9 @@
   "codice": "PN",
   "titolo": "Piano terra — planimetria d'Ateneo ridisegnata da DOVE?UNIPI",
   "piano": "piano terra",
-  "dwg": "Polo Porta Nuova",
   "fonte": "dove",
+  "scritte_dwg": 0,
+  "dwg": "Polo Porta Nuova",
   "riquadro": [
    [
     43.7253957,
