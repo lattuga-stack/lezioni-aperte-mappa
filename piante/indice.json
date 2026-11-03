@@ -1,5 +1,100 @@
 [
  {
+  "file": "A05_spazi_piano0.geojson",
+  "codice": "A05",
+  "titolo": "Piano terra — rilevazione spazi d'Ateneo",
+  "piano": "piano terra",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Ricci (A05)",
+  "riquadro": [
+   [
+    43.71739611859774,
+    10.396641935960668
+   ],
+   [
+    43.71785349656714,
+    10.397197375162781
+   ]
+  ]
+ },
+ {
+  "file": "A05_spazi_piano1.geojson",
+  "codice": "A05",
+  "titolo": "Piano primo — rilevazione spazi d'Ateneo",
+  "piano": "piano primo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Ricci (A05)",
+  "riquadro": [
+   [
+    43.717400080144394,
+    10.396646340175945
+   ],
+   [
+    43.71785503525545,
+    10.397183378578493
+   ]
+  ]
+ },
+ {
+  "file": "A05_spazi_piano2.geojson",
+  "codice": "A05",
+  "titolo": "Piano secondo — rilevazione spazi d'Ateneo",
+  "piano": "piano secondo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Ricci (A05)",
+  "riquadro": [
+   [
+    43.71741965876617,
+    10.396661705062813
+   ],
+   [
+    43.717869906446275,
+    10.397185192724425
+   ]
+  ]
+ },
+ {
+  "file": "A05_spazi_piano3.geojson",
+  "codice": "A05",
+  "titolo": "Piano terzo — rilevazione spazi d'Ateneo",
+  "piano": "piano terzo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Ricci (A05)",
+  "riquadro": [
+   [
+    43.71742142508425,
+    10.396631499541646
+   ],
+   [
+    43.717859167678576,
+    10.397180305463698
+   ]
+  ]
+ },
+ {
+  "file": "A05_spazi_piano4.geojson",
+  "codice": "A05",
+  "titolo": "Piano quarto — rilevazione spazi d'Ateneo",
+  "piano": "piano quarto",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo Ricci (A05)",
+  "riquadro": [
+   [
+    43.717510997257385,
+    10.3966422065133
+   ],
+   [
+    43.71785321876678,
+    10.397175762041739
+   ]
+  ]
+ },
+ {
   "file": "A06_p01.geojson",
   "codice": "A06",
   "titolo": "Piano Terra — Stato Attuale, 1:400 (Tav. I)",
@@ -418,6 +513,82 @@
   ]
  },
  {
+  "file": "B36_spazi_piano0.geojson",
+  "codice": "B36",
+  "titolo": "Piano terra — rilevazione spazi d'Ateneo",
+  "piano": "piano terra",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo del Granduca (B36)",
+  "riquadro": [
+   [
+    43.7181659059597,
+    10.395481535601473
+   ],
+   [
+    43.71889535153716,
+    10.397109110971689
+   ]
+  ]
+ },
+ {
+  "file": "B36_spazi_piano1.geojson",
+  "codice": "B36",
+  "titolo": "Piano primo — rilevazione spazi d'Ateneo",
+  "piano": "piano primo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo del Granduca (B36)",
+  "riquadro": [
+   [
+    43.718167311384576,
+    10.39549968649804
+   ],
+   [
+    43.71885980439717,
+    10.397108931564926
+   ]
+  ]
+ },
+ {
+  "file": "B36_spazi_piano2.geojson",
+  "codice": "B36",
+  "titolo": "Piano secondo — rilevazione spazi d'Ateneo",
+  "piano": "piano secondo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo del Granduca (B36)",
+  "riquadro": [
+   [
+    43.71816684326903,
+    10.39551157373213
+   ],
+   [
+    43.718864773950116,
+    10.397105715352346
+   ]
+  ]
+ },
+ {
+  "file": "B36_spazi_piano3.geojson",
+  "codice": "B36",
+  "titolo": "Piano terzo — rilevazione spazi d'Ateneo",
+  "piano": "piano terzo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Palazzo del Granduca (B36)",
+  "riquadro": [
+   [
+    43.71816650576333,
+    10.39617482018516
+   ],
+   [
+    43.718669567242216,
+    10.39709889230225
+   ]
+  ]
+ },
+ {
   "file": "B45_pee_piano0.geojson",
   "codice": "B45",
   "titolo": "Piano terra — piano di emergenza ed evacuazione",
@@ -608,6 +779,63 @@
   ]
  },
  {
+  "file": "B74_spazi_piano0.geojson",
+  "codice": "B74",
+  "titolo": "Piano terra — rilevazione spazi d'Ateneo",
+  "piano": "piano terra",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Dipartimento di Chimica, San Cataldo (B74)",
+  "riquadro": [
+   [
+    43.7168869363689,
+    10.42660897477762
+   ],
+   [
+    43.717634099687395,
+    10.427764887944127
+   ]
+  ]
+ },
+ {
+  "file": "B74_spazi_piano1.geojson",
+  "codice": "B74",
+  "titolo": "Piano primo — rilevazione spazi d'Ateneo",
+  "piano": "piano primo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Dipartimento di Chimica, San Cataldo (B74)",
+  "riquadro": [
+   [
+    43.71688567281598,
+    10.426655630197027
+   ],
+   [
+    43.71761537998414,
+    10.427771978178091
+   ]
+  ]
+ },
+ {
+  "file": "B74_spazi_piano2.geojson",
+  "codice": "B74",
+  "titolo": "Piano secondo — rilevazione spazi d'Ateneo",
+  "piano": "piano secondo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Dipartimento di Chimica, San Cataldo (B74)",
+  "riquadro": [
+   [
+    43.71688847291595,
+    10.426662881449648
+   ],
+   [
+    43.71761780173647,
+    10.427763446407171
+   ]
+  ]
+ },
+ {
   "file": "B75_pee_piano0.geojson",
   "codice": "B75",
   "titolo": "Piano terra — piano di emergenza ed evacuazione",
@@ -760,6 +988,63 @@
   ]
  },
  {
+  "file": "D08_spazi_piano0.geojson",
+  "codice": "D08",
+  "titolo": "Piano terra — rilevazione spazi d'Ateneo",
+  "piano": "piano terra",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Ex Clinica Otorinolaringoiatrica, via Savi (D08)",
+  "riquadro": [
+   [
+    43.72011790036408,
+    10.393278912374777
+   ],
+   [
+    43.72038353608842,
+    10.393885508863493
+   ]
+  ]
+ },
+ {
+  "file": "D08_spazi_piano1.geojson",
+  "codice": "D08",
+  "titolo": "Piano primo — rilevazione spazi d'Ateneo",
+  "piano": "piano primo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Ex Clinica Otorinolaringoiatrica, via Savi (D08)",
+  "riquadro": [
+   [
+    43.72011531644713,
+    10.39328062890157
+   ],
+   [
+    43.720384855145895,
+    10.393890431993563
+   ]
+  ]
+ },
+ {
+  "file": "D08_spazi_piano2.geojson",
+  "codice": "D08",
+  "titolo": "Piano secondo — rilevazione spazi d'Ateneo",
+  "piano": "piano secondo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Ex Clinica Otorinolaringoiatrica, via Savi (D08)",
+  "riquadro": [
+   [
+    43.72011531644713,
+    10.39328062890157
+   ],
+   [
+    43.720384855145895,
+    10.393890431993563
+   ]
+  ]
+ },
+ {
   "file": "D27_pee_piano0.geojson",
   "codice": "D27",
   "titolo": "Piano terra — piano di emergenza ed evacuazione",
@@ -775,6 +1060,63 @@
    [
     43.720794501873975,
     10.395636212609691
+   ]
+  ]
+ },
+ {
+  "file": "D27_spazi_piano0a.geojson",
+  "codice": "D27",
+  "titolo": "Piano ammezzato — rilevazione spazi d'Ateneo",
+  "piano": "piano ammezzato",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Scuola Medica (D27)",
+  "riquadro": [
+   [
+    43.72004982650326,
+    10.394610617138449
+   ],
+   [
+    43.720535167758285,
+    10.395327252149833
+   ]
+  ]
+ },
+ {
+  "file": "D27_spazi_piano1.geojson",
+  "codice": "D27",
+  "titolo": "Piano primo — rilevazione spazi d'Ateneo",
+  "piano": "piano primo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Scuola Medica (D27)",
+  "riquadro": [
+   [
+    43.72003548114329,
+    10.39435238021743
+   ],
+   [
+    43.72066183819899,
+    10.395604757440726
+   ]
+  ]
+ },
+ {
+  "file": "D27_spazi_piano2.geojson",
+  "codice": "D27",
+  "titolo": "Piano secondo — rilevazione spazi d'Ateneo",
+  "piano": "piano secondo",
+  "fonte": "spazi",
+  "scritte_dwg": 0,
+  "dwg": "Scuola Medica (D27)",
+  "riquadro": [
+   [
+    43.72003986072395,
+    10.394380907379976
+   ],
+   [
+    43.720652880878546,
+    10.39546929166439
    ]
   ]
  },
